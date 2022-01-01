@@ -38,8 +38,9 @@ body {
 .header-nav li {
     list-style-type: none;
 }
-text { 
-   padding-top: 200px;
+.text { 
+   padding-top: 335px;
+   max-width: 676px;
 }
 button {
    margin-top: 100px;
@@ -78,6 +79,10 @@ button {
     width: 52px;
     height: 55px;
     border: none;
+    background-color: transparent;
+}
+.text-right {
+    margin-left: 90px;
 }
 .box {
    display: flex;
@@ -85,24 +90,28 @@ button {
    width: 100%;
    gap: 20px;
    position: absolute;
-   top: 0;
+   top: 20px;
    z-index: -1;
    right: -75px;
 }
 .box-gradient-left {
-   background: #ff0;
-   flex-basis: 70%;
-   height: 850px;
+    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    opacity: 0.2;
+    flex-basis: 70%;
+    height: 850px;
+    width: 535px;
 }
 .box-gradient-right {
-   background: #ff0;
-   flex-basis: 30%;
-   height: 850px;
+    background: linear-gradient(90deg, #FDF9B6 0%, rgba(253, 249, 182, 0.7) 166.81%);
+    opacity: 0.2;
+    flex-basis: 30%;
+    height: 850px;
+    width: 235px;
 }
 .box-image {
    position: absolute;
    top: 0;
    right: -75px;
    width: 996px;
-   height: 850px;
+   height: 100%
 }

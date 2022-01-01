@@ -42,9 +42,7 @@ body {
    padding-top: 335px;
    max-width: 676px;
 }
-button {
-   margin-top: 100px;
-}
+
 .title {
     font-size: 48px;
     line-height: 125%;
@@ -80,6 +78,7 @@ button {
     height: 55px;
     border: none;
     background-color: transparent;
+    margin-top: 100px;
 }
 .text-right {
     margin-left: 90px;
@@ -99,7 +98,6 @@ button {
     opacity: 0.2;
     flex-basis: 70%;
     height: 850px;
-    width: 535px;
 }
 .box-gradient-right {
     background: linear-gradient(90deg, #FDF9B6 0%, rgba(253, 249, 182, 0.7) 166.81%);
@@ -114,4 +112,14 @@ button {
    right: -75px;
    width: 996px;
    height: 100%
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 20px;
+    align-content: space-around;
+}
+.timetable-flex {
+    display: flex;
+    height: 100%;
 }

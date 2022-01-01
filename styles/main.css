@@ -1,6 +1,73 @@
 body {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
-header-logo {
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.container {
+   max-width: 1143px;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin: 0 auto;
+   position: relative;
+}
+.header-logo img {
     background-image: url(../images/logo.svg);
+    width: 97px;
+    height: 56px;
+} 
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.social {
+  display: flex;
+  gap: 10px;
+}
+.header-nav a {
+    font-size: 18px;
+    color: #2B3541;   
+    text-decoration: none;
+}
+.header-nav li {
+    list-style-type: none;
+}
+text {
+   padding-top: 200px;
+}
+button {
+   margin-top: 100px;
+}
+.box {
+   display: flex;
+   max-width: 790px;
+   width: 100%;
+   gap: 20px;
+   position: absolute;
+   top: 0;
+   z-index: -1;
+   right: -75px;
+}
+.box-gradient-left {
+   background: #ff0;
+   flex-basis: 70%;
+   height: 850px;
+}
+.box-gradient-right {
+   background: #ff0;
+   flex-basis: 30%;
+   height: 850px;
+}
+.box-image {
+   position: absolute;
+   top: 0;
+   right: -75px;
+   width: 996px;
+   height: 850px;
 }

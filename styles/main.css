@@ -1,11 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
-
-.header {
-    display: flex;
-    align-items: center;
-}
 .container {
    max-width: 1143px;
    padding-right: 15px;
@@ -13,6 +8,7 @@ body {
    margin: 0 auto;
    position: relative;
 }
+
 .header-logo-img {
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
@@ -20,23 +16,29 @@ body {
     width: 97px;
     height: 56px;
 } 
-.header-logo {
-    flex-basis: 20% ;
+.header {
+    display: flex;
+    align-items: center;
 }
-.header-nav {
+.header-logo {
+    flex-basis: 20%;
+}
+.header nav {
     flex-basis: 90%;
 }
-.social {
-  display: flex;
-  gap: 10px;
+.header-ul {
+    display: flex;
+    list-style-type: none;
+    gap: 55px;
 }
-.header-nav a {
+.social {
+    display: flex;
+    gap: 10px;
+}
+.header-ul a {
     font-size: 18px;
     color: #2B3541;   
     text-decoration: none;
-}
-.header-nav li {
-    list-style-type: none;
 }
 .text { 
    padding-top: 335px;

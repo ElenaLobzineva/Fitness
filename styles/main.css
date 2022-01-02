@@ -5,8 +5,6 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 18px;
 }
 .container {
    max-width: 1143px;
@@ -15,16 +13,18 @@ body {
    margin: 0 auto;
    position: relative;
 }
-.header-logo img {
+.header-logo-img {
     background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    display: block;
     width: 97px;
     height: 56px;
 } 
+.header-logo {
+    flex-basis: 20% ;
+}
 .header-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    flex-basis: 90%;
 }
 .social {
   display: flex;
@@ -113,13 +113,42 @@ body {
    width: 996px;
    height: 100%
 }
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px 20px;
-    align-content: space-around;
-}
 .timetable-flex {
     display: flex;
     height: 100%;
 }
+.menu-events {
+    max-width: 1143px;
+    
+}
+.box-event {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 145px;
+}
+.event-maraphon {
+    background-image: url(../images/files/@1x/maraphon.png);
+    width: 367px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.event-vebinar-1 {
+    background-image: url(../images/files/@1x/Vebinar\ 1.png);
+    width: 367px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.event-vebinar-2 {
+    background-image: url(../images/files/@1x/Vebinar\ 2.png);
+    width: 367px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+

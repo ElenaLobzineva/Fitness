@@ -4,7 +4,7 @@ body {
 .container {
    max-width: 1143px;
    padding-right: 15px;
-   padding-left: 15px;
+   padding-left: 5px;
    margin: 0 auto;
    position: relative;
 }
@@ -139,13 +139,44 @@ body {
 }
 .menu-events {
     max-width: 1143px;
-    
+}
+.events-headers {
+    margin-top: 160px;
+    margin-left: -4px;
+}
+.event-data {
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    opacity: 0.6;
+    font-weight: 700;
+    margin-top: 34px;
+    margin-left: 27px;
 }
 .box-event {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 16px;
     margin-bottom: 145px;
+}
+.event-title {
+    font-size: 28px;
+    line-height: 125%;
+    font-weight: 700;
+    max-width: 260px;
+    margin-top: 10px;
+    margin-left: 37px;
+}
+.participate {
+    display: none;
+}
+.button-participate {
+    position: absolute;
+    right:    0;
+    bottom:   0;
+    background-color: #FBF138;
+    border: none;
+    padding: 10px 20px;
 }
 .event-maraphon {
     background-image: url(../images/files/@1x/maraphon.png);
@@ -173,6 +204,5 @@ body {
 }
 .events-headers h3 {
     font-size: 40px;
-
 }
 

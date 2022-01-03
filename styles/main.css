@@ -262,41 +262,32 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-.img-body {
+.grid-timetable:nth-child(1) img {
+    width: 65px;
     height: 65px;
-    width: 65px;
-    margin-left: 20px;
-    margin-bottom: -10px;
 }
-.img-bottle {
-    height: 85px;
+.grid-timetable:nth-child(2) img {
     width: 42px;
-    margin-left: 20px;
-    margin-bottom: -185px;
+    height: 85px;
 }
-.img-dumbbell {
-    height: 50px;
+.grid-timetable:nth-child(3) img {
     width: 91px;
-    margin-left: 20px;
-    margin-bottom: -120px;
+    height: 50px;
 }
-.img-jump {
-    height: 107px;
+.grid-timetable:nth-child(4) img {
     width: 67px;
-    margin-left: 20px;
-    margin-bottom: -217px;
+    height: 107px;
 }
-.img-heart {
-    height: 61px;
+.grid-timetable:nth-child(5) img {
     width: 65px;
-    margin-left: 20px;
-    margin-bottom: -30px;
+    height: 61px;
 }
-.img-weight {
-    height: 66px;
+.grid-timetable:nth-child(6) img {
     width: 58px;
+    height: 66px;
+}
+.img-grid {
     margin-left: 20px;
-    margin-bottom: -147px;
 }
 .grid-timetable:nth-child(1) {
     grid-column: 1 / 2;
@@ -337,7 +328,7 @@ body {
     line-height: 125%;
     font-weight: 700;
     margin-left: 18px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
  }
  .grid-timetable-description {
      display: none;
@@ -358,27 +349,7 @@ body {
      margin-top: 10px;
  }
  .grid-timetable:hover
- .img-body {
-     margin-bottom: 10px;
- }
- .grid-timetable:hover
- .img-bottle {
-     margin-bottom: 10px;
- }
- .grid-timetable:hover
- .img-dumbbell {
-     margin-bottom: 10px;
- }
- .grid-timetable:hover
- .img-jump {
-     margin-bottom: 10px;
- }
- .grid-timetable:hover
- .img-heart {
-     margin-bottom: 10px;
- }
- .grid-timetable:hover
- .img-weight {
+ .img-grid {
      margin-bottom: 10px;
  }
  .workout-schedule {

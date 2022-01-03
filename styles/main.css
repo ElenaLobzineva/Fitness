@@ -253,7 +253,7 @@ body {
 .timetable-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px 60px 90px 280px;
+    grid-template-rows: 250px 31px 63px 279px;
     gap: 27px;
 }
 .grid-timetable {
@@ -266,37 +266,37 @@ body {
     height: 65px;
     width: 65px;
     margin-left: 20px;
-    margin-bottom: -18px;
+    margin-bottom: -10px;
 }
 .img-bottle {
     height: 85px;
     width: 42px;
     margin-left: 20px;
-    margin-bottom: -100px;
+    margin-bottom: -185px;
 }
 .img-dumbbell {
     height: 50px;
     width: 91px;
     margin-left: 20px;
-    margin-bottom: -60px;
+    margin-bottom: -120px;
 }
 .img-jump {
     height: 107px;
     width: 67px;
     margin-left: 20px;
-    margin-bottom: -190px;
+    margin-bottom: -217px;
 }
 .img-heart {
     height: 61px;
     width: 65px;
     margin-left: 20px;
-    margin-bottom: 53px;
+    margin-bottom: -30px;
 }
 .img-weight {
     height: 66px;
     width: 58px;
     margin-left: 20px;
-    margin-bottom: -50px;
+    margin-bottom: -147px;
 }
 .grid-timetable:nth-child(1) {
     grid-column: 1 / 2;
@@ -337,11 +337,50 @@ body {
     line-height: 125%;
     font-weight: 700;
     margin-left: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
  }
  .grid-timetable-description {
      display: none;
+     max-width: 300px;
+     opacity: 0.7;
+     margin-left: 20px;
+     line-height: 150%;
  }
  .grid-timetable:hover {
     border: none;
+ }
+ .grid-timetable:hover 
+ .grid-timetable-description {
+     display: block;
+ }
+ .grid-timetable:hover
+ .grid-timetable-title {
+     margin-top: 10px;
+ }
+ .grid-timetable:hover
+ .img-body {
+     margin-bottom: 10px;
+ }
+ .grid-timetable:hover
+ .img-bottle {
+     margin-bottom: 10px;
+ }
+ .grid-timetable:hover
+ .img-dumbbell {
+     margin-bottom: 10px;
+ }
+ .grid-timetable:hover
+ .img-jump {
+     margin-bottom: 10px;
+ }
+ .grid-timetable:hover
+ .img-heart {
+     margin-bottom: 10px;
+ }
+ .grid-timetable:hover
+ .img-weight {
+     margin-bottom: 10px;
+ }
+ .workout-schedule {
+     margin: 0;
  }

@@ -632,4 +632,43 @@ body {
     border-radius: 100%;
     z-index: -1;
 }
+.event-maraphon-modal {
+    display: block;
+}
+#application-maraphon{
+    max-width: 600px;
+    background-color: #F3F3F3;
+    text-align: center;
+    position: absolute;
+    left: 25px;
+    right: 0;
+    margin: 20px auto 0;
+    padding: 60px 30px;
+    box-sizing: border-box;  
+    top: -1000; 
+}
+#application-vebinar-1{
+    max-width: 600px;
+    background-color: #F3F3F3;
+    text-align: center;
+    position: absolute;
+    left: 25px;
+    right: 0;
+    margin: 20px auto 0;
+    padding: 60px 30px;
+    box-sizing: border-box;  
+    top: -1000; 
+}
+#application-vebinar-2{
+    max-width: 600px;
+    background-color: #F3F3F3;
+    text-align: center;
+    position: absolute;
+    left: 25px;
+    right: 0;
+    margin: 20px auto 0;
+    padding: 60px 30px;
+    box-sizing: border-box;  
+    top: -1000; 
+}
 

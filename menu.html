@@ -74,7 +74,7 @@
                             <div class="box-event-gradient">    
                                 <p class="event-data">29.06 - 4.07</p>
                                 <p class="event-title">Марафон выносливости</p>
-                                <a href="#" class="participate" id="application">участвовать</a>
+                                <a href="#" class="participate" onclick="openModal()">участвовать</a>
                                 <button class="button-participate">марафон</button>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                             <div class="box-event-gradient">
                                 <p class="event-data">9.07</p>
                                 <p class="event-title">Как стать тренером?</p>
-                                <a href="#" class="participate" id="application">участвовать</a>
+                                <a href="#" class="participate" onclick="openModal()">участвовать</a>
                                 <button class="button-participate">вебинар</button>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                             <div class="box-event-gradient">
                                 <p class="event-data">15.07</p>
                                 <p class="event-title">Йога, как стиль жизни</p>
-                                <a href="#" class="participate" id="application">участвовать</a>
+                                <a href="#" class="participate" onclick="openModal()">участвовать</a>
                                 <button class="button-participate">вебинар</button>
                             </div>
                         </div>
@@ -227,5 +227,58 @@
         </div> 
     </div>
 </footer>
+
+
+
+<!----MODAL----> 
+<div class="modal-all">
+    <div class="event-modal" id="application-maraphon">
+        <h3>Заявка на участие «Марафон выносливости»</h3>
+        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+        <form class="form-vent-maraphon-modal" action="mailto:ваш адрес e-mail" enctype="text/plain">
+            <input type="email" value="Ваш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail" required>
+            <input type="tel" placeholder="Ваш номер телефона" required>
+            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
+        </form>
+    </div>
+    <div class="event-modal" id="application-vebinar-1">
+        <h3>Заявка на участие в вебинаре «Как стать тренером?»</h3>
+        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+        <form class="form-vent-maraphon-modal" action="mailto:ваш адрес e-mail" enctype="text/plain">
+            <input type="email" value="В    аш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail" required>
+            <input type="tel" placeholder="Ваш номер телефона" required>
+            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
+        </form>
+    </div>
+    <div class="event-modal" id="application-vebinar-2">
+        <h3>Заявка на участие в вебинаре «Йога, как стиль жизни»</h3>
+        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+        <form class="form-vent-maraphon-modal" action="mailto:ваш адрес e-mail" enctype="text/plain">
+            <input type="email" value="В    аш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail" required>
+            <input type="tel" placeholder="Ваш номер телефона" required>
+            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+    //Menu
+    function openModal() {
+            document.getElementById("application-maraphon").style.top = "0px";
+        }
+        function openModal() {
+            document.getElementById("application-vebinar-1").style.top = "0px";
+        }
+        function openModal() {
+            document.getElementById("application-vebinar-2").style.top = "0px";
+        }
+
+        function closeModal() {
+            document.getElementById("application").style.top = "-400px";
+        }
+        
+</script>
 </body>
 </html>

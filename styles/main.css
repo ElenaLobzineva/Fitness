@@ -516,11 +516,13 @@ body {
     margin-top: -16px;
 }
 .about-company-btn {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
     padding: 23px 52px;
     background-color: #FBF138;
     font-size: 16px;
     line-height: 150%;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #2B3541;
     text-decoration: none;

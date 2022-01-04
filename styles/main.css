@@ -467,3 +467,89 @@ body {
  .radio:checked + label::before{
     border-radius: 100%;
  }
+
+ /*-------about-company-------*/
+ 
+ .about-company {
+    margin-top: 155px;
+    /*--margin-bottom: 155px;--*/
+}
+.container-content {
+    position: relative;
+    margin-bottom: 110px;
+}
+.container-content img {
+    position: absolute;
+    width: 580px;
+    height: 334px;
+    top: 0px;
+    right: 0px;
+}
+.about-company-img {
+    background-image: url("../images/files/@1x/trainer.png");
+    width: 580px;
+    height: 334px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.about-company-img-gradient {
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);
+    width: 580px;
+    height: 334px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.about-company-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+.about-company-text {
+    font-size: 18px;
+    line-height: 150%;
+    max-width: 470px;
+    margin-bottom: 55px;
+    margin-top: -16px;
+}
+.about-company-btn {
+    padding: 23px 52px;
+    background-color: #FBF138;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2B3541;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.about-company-btn:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+}
+.about-company-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 46px;
+    margin-top: 140px;
+}
+.company-benefits {
+    min-width: 250px;
+}
+.company-benefits-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 125%;
+
+}
+.company-benefits-description {
+    font-size: 18px;
+    max-width: 250px;
+    opacity: 0.6;
+    line-height: 150%;
+}

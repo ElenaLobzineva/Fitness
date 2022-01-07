@@ -339,14 +339,16 @@ body {
  .grid-timetable-description {
      display: none;
      max-width: 300px;
-     opacity: 0.7;
      margin-left: 20px;
      line-height: 150%;
+     color: #2B3541;
  }
  .grid-timetable:hover {
     border: none;
+    box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
+    background-color:rgba(243, 243, 243, 0.5) ;
  }
- .grid-timetable:hover 
+
  .grid-timetable-description {
      display: block;
  }

@@ -202,11 +202,15 @@ body {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #FBF138;
-    background-color: #2B3541;
+    color: #2B3541;
+    background-color: #FBF138;
     padding: 20px 37px;
     margin-left: 37px;
     opacity: 0;
+}
+.participate:hover {
+    color: #FBF138;
+    background-color: #2B3541;
 }
 .event-maraphon {
     background-image: url(../images/files/@1x/maraphon.png);

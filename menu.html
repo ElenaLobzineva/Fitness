@@ -74,7 +74,7 @@
                             <div class="box-event-gradient">    
                                 <p class="event-data">29.06 - 4.07</p>
                                 <p class="event-title">Марафон выносливости</p>
-                                <a href="#" class="participate" onclick="openModal()">участвовать</a>
+                                <a href="#" class="participate" id="application-maraphon">участвовать</a>
                                 <button class="button-participate">марафон</button>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                             <div class="box-event-gradient">
                                 <p class="event-data">9.07</p>
                                 <p class="event-title">Как стать тренером?</p>
-                                <a href="#" class="participate" onclick="openModal()">участвовать</a>
+                                <a href="#" class="participate" id="application-vebinar-1">участвовать</a>
                                 <button class="button-participate">вебинар</button>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                             <div class="box-event-gradient">
                                 <p class="event-data">15.07</p>
                                 <p class="event-title">Йога, как стиль жизни</p>
-                                <a href="#" class="participate" onclick="openModal()">участвовать</a>
+                                <a href="#" class="participate" id="application-vebinar-2">участвовать</a>
                                 <button class="button-participate">вебинар</button>
                             </div>
                         </div>
@@ -111,13 +111,13 @@
                         <p class="grid-timetable-data">22 июня, 10:00</p>
                         <img class="img-grid" src="images/icons/body.svg" alt="Функциональный тренинг">
                         <p class="grid-timetable-title">Функциональный тренинг</p>
-                        <p class="grid-timetable-description">Описание Функциональный тренинг. Описание Функциональный тренинг.</p>
+                        <p class="grid-timetable-description">Описание Функциональный тренинг</p>
                     </div>
                     <div class="grid-timetable">
                         <p class="grid-timetable-data">24 июня, 10:00</p>
                         <img class="img-grid" src="images/icons/bottle.svg" alt="Body sculpt">
                         <p class="grid-timetable-title">Body sculpt</p>
-                        <p class="grid-timetable-description">Описание Body sculpt. Описание Body sculpt.</p>
+                        <p class="grid-timetable-description">Описание Body sculpt</p>
                     </div>
                     <div class="grid-timetable">
                         <p class="grid-timetable-data">26 июня, 11:00</p>
@@ -223,7 +223,7 @@
         </div>
         <div class="footer-rights">
             <p>© 2020, Все права защищены</p>
-            <p>Сделано в рамках курса учебной платформы Annblok</p>
+            <p>Сделано в рамках курса учебной платформы <a href="#" class="footer-linc">Annblok</a></p>
         </div> 
     </div>
 </footer>
@@ -231,53 +231,61 @@
 
 
 <!----MODAL----> 
-<div class="modal-all">
-    <div class="event-modal" id="application-maraphon">
-        <h3>Заявка на участие «Марафон выносливости»</h3>
-        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
-        <form class="form-vent-maraphon-modal" action="mailto:ваш адрес e-mail" enctype="text/plain">
-            <input type="email" value="Ваш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail" required>
+
+
+<div>
+    <div id="modal_maraphon" class="modal_event_maraphon">
+        <div class="modal-content">
+          <span class="close"></span>
+              <p class="modal-title">Заявка на участие
+                  «Марафон выносливости»</p>
+              <p class="modal-description">
+                  Заполните все поля, и мы пришлем информацию в ближайшее время
+              </p>
+          </div>
+          <form class="modal-form">
+              <input type="email" placeholder="Ваш e-mail" required>
+              <input type="tel" placeholder="Ваш номер телефона" required>
+              <a href="#" class="bg-button">Отправить</a>
+          </form>
+        </div>
+
+    <div id="modal_vebinar-1" class="modal_event_vebinar-1">
+      <div class="modal-content">
+        <span class="close"></span>
+            <p class="modal-title">Заявка на участие
+                «Вебинар "Как стать тренером?"»</p>
+            <p class="modal-description">
+                Заполните все поля, и мы пришлем информацию в ближайшее время
+            </p>
+        </div>
+        <form class="modal-form">
+            <input type="email" placeholder="Ваш e-mail" required>
             <input type="tel" placeholder="Ваш номер телефона" required>
-            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
+            <a href="#" class="bg-button">Отправить</a>
         </form>
-    </div>
-    <div class="event-modal" id="application-vebinar-1">
-        <h3>Заявка на участие в вебинаре «Как стать тренером?»</h3>
-        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
-        <form class="form-vent-maraphon-modal" action="mailto:ваш адрес e-mail" enctype="text/plain">
-            <input type="email" value="Ваш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail" required>
-            <input type="tel" placeholder="Ваш номер телефона" required>
-            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
-        </form>
-    </div>
-    <div class="event-modal" id="application-vebinar-2">
-        <h3>Заявка на участие в вебинаре «Йога, как стиль жизни»</h3>
-        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
-        <form class="form-vent-maraphon-modal" action="mailto:ваш адрес e-mail" enctype="text/plain">
-            <input type="email" value="Ваш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail" required>
-            <input type="tel" placeholder="Ваш номер телефона" required>
-            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
-        </form>
-    </div>
+      </div>
+
+    <div id="modal_vebinar-2" class="modal_event_vebinar-2">
+        <div class="modal-content">
+          <span class="close"></span>
+              <p class="modal-title">Заявка на участие
+                «Вебинар "Йога, как стиль жизни"»</p>
+              <p class="modal-description">
+                  Заполните все поля, и мы пришлем информацию в ближайшее время
+              </p>
+          </div>
+          <form class="modal-form">
+              <input type="email" placeholder="Ваш e-mail" required>
+              <input type="tel" placeholder="Ваш номер телефона" required>
+              <a href="#" class="bg-button">Отправить</a>
+          </form>
+        </div>
 </div>
 
 
-
 <script>
-    //Menu
-    function openModal() {
-            document.getElementById("application-maraphon").style.top = "0px";
-        }
-        function openModal() {
-            document.getElementById("application-vebinar-1").style.top = "0px";
-        }
-        function openModal() {
-            document.getElementById("application-vebinar-2").style.top = "0px";
-        }
 
-        function closeModal() {
-            document.getElementById("application").style.top = "-400px";
-        }
         
 </script>
 </body>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,51 +15,286 @@
 </head>
 
 <body>
+
+<!----ШАПКА---->
+
     <header id="headerTop">
         <div class="container">
             <div class="header">
-                <form class="header-item-logo">
-                    <img class="header-logo" src="images/logo.svg" alt="Логотип">
-                </form>
+                <p class="header-logo"><a href="#" class="header-logo-img"><img src="images/logo.svg" alt="Логотип"></a></p>
                 <nav>
-                    <ul class="header-nav">
-                        <li><a href="#">Мероприятия</a></li>
-                        <li><a href="#">Расписание</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Контакты</a></li>
+                    <ul class="header-ul">
+                        <li><a href="#upcoming-events">Мероприятия</a></li>
+                        <li><a href="#timetable-workout">Расписание</a></li>
+                        <li><a href="#info-company">О компании</a></li>
                     </ul>
                 </nav>
                 <div class="social">
-                    <form class="social-in" action="#" target="_blank">
-                        <img src="images/icons/IN.svg" alt="Инстаграм">
-                    </form>
-                    <form class="butten-item-fb" action="#" target="_blank">
-                        <img src="images/icons/FB.svg" alt="Фйсбук">
-                    </form>
+                    <p><a href="#" class="social-in"><img src="images/icons/IN.svg" alt="Инстаграм"></a></p>
+                    <p><a href="#" class="social-fb"><img src="images/icons/FB.svg" alt="Фйсбук"></a></p>
                 </div>
             </div>
         </div>
     </header>
+  
+<!----БАННЕР workout ---->
+
     <div class="container">
-        <div class="text">
-            <h2 class="title">онлайн тренировки любой сложности</h2>
-            <h2 class="subtitle">> 15 тренировок</h2>
-            <h2 class="desc">в области спортивной физиологии и нутрициологии</h2>
-            <h2 class="banner-text">Узнать подробнее</h2>
-            <button class="arrow">
-                <a href="#" class="arrow-link"></a>
-            </button>
-        </div>
-        <div class="box">
-            <div class="box-gradient-left"></div>
-            <div class="box-gradient-right"></div>
-            <img class="box-image" src="images/files/@1x/Image 1 screen.png" alt="Спортивная девушка">
+        <div class="banner-workout">
+            <div class="workout-box">
+                <div class="text">
+                    <h2 class="title">онлайн тренировки любой сложности</h2>
+                    <h2 class="subtitle">> 15 тренировок</h2>
+                    <div class="text-right">
+                        <h2 class="desc">в области спортивной физиологии и нутрициологии</h2>
+                        <h2 class="banner-text">Узнать подробнее</h2>
+                    </div>
+                    <form action="#timetable-workout">
+                        <button class="arrow"></button>
+                    </form>
+                </div>
+                <div class="box">
+                    <div class="box-gradient-left"></div>
+                    <div class="box-gradient-right"></div>
+                    <img class="box-image" src="images/files/@1x/Image 1 screen.png" alt="girl">
+                </div>
+            </div>
         </div>
     </div>
+    
+<!----бЛИЖАЙШИЕ СОБЫТИЯ---->
+    <main>
+        <div class="event">
+            <div class="container">
+                <div class="events-headers">
+                    <h3 class="menu-events-title" id="upcoming-events">Ближайшие события</h3>
+                </div>
+                    <div class="box-event">
+                        <div class="event-maraphon">
+                            <div class="box-event-gradient">    
+                                <p class="event-data">29.06 - 4.07</p>
+                                <p class="event-title">Марафон выносливости</p>
+                                <a href="#" class="participate" id="application-maraphon">участвовать</a>
+                                <button class="button-participate">марафон</button>
+                            </div>
+                        </div>
+                        <div class="event-vebinar-1">
+                            <div class="box-event-gradient">
+                                <p class="event-data">9.07</p>
+                                <p class="event-title">Как стать тренером?</p>
+                                <a href="#" class="participate" id="application-vebinar-1">участвовать</a>
+                                <button class="button-participate">вебинар</button>
+                            </div>
+                        </div>
+                        <div class="event-vebinar-2">
+                            <div class="box-event-gradient">
+                                <p class="event-data">15.07</p>
+                                <p class="event-title">Йога, как стиль жизни</p>
+                                <a href="#" class="participate" id="application-vebinar-2">участвовать</a>
+                                <button class="button-participate">вебинар</button>
+                            </div>
+                        </div>
+                    </div> 
+            </div>
+        </div>
         
-                    
-            
-     
+<!----РАСПИСАНИЕ ТРЕНИРОВОК---->
+
+        <div class="workout-schedule" id="timetable-workout">
+            <div class="container">
+                <div class="timetable">
+                    <h2 class="timetable-title">Расписание тренировок</h2>
+                    <h2 class="timetable-data">22 - 28 июня</h2>
+                </div>
+                <div class="timetable-grid">
+                    <div class="grid-timetable">
+                        <p class="grid-timetable-data">22 июня, 10:00</p>
+                        <img class="img-grid" src="images/icons/body.svg" alt="Функциональный тренинг">
+                        <p class="grid-timetable-title">Функциональный тренинг</p>
+                        <p class="grid-timetable-description">Описание Функциональный тренинг. Описание Функциональный тренинг.</p>
+                    </div>
+                    <div class="grid-timetable">
+                        <p class="grid-timetable-data">24 июня, 10:00</p>
+                        <img class="img-grid" src="images/icons/bottle.svg" alt="Body sculpt">
+                        <p class="grid-timetable-title">Body sculpt</p>
+                        <p class="grid-timetable-description">Описание Body sculpt. Описание Body sculpt.</p>
+                    </div>
+                    <div class="grid-timetable">
+                        <p class="grid-timetable-data">26 июня, 11:00</p>
+                        <img class="img-grid" src="images/icons/dumbbell.svg" alt="L.A.B.">
+                        <p class="grid-timetable-title">L.A.B.</p>
+                        <p class="grid-timetable-description">Описание L.A.B.Описание L.A.B.Описание L.A.B.</p>
+                    </div>
+                    <div class="grid-timetable">
+                        <p class="grid-timetable-data">23 июня, 10:00</p>
+                        <img class="img-grid" src="images/icons/jump.svg" alt="Силовой микс">
+                        <p class="grid-timetable-title">Силовой микс</p>
+                        <p class="grid-timetable-description">Упражнения помогут создать красивый рельеф и прийти в спортивную форму.</p>
+                    </div>
+                    <div class="grid-timetable"> 
+                        <p class="grid-timetable-data">25 июня, 11:00</p>
+                        <img class="img-grid" src="images/icons/heart.svg" alt="Дыхательные практики">
+                        <p class="grid-timetable-title">Дыхательные практики</p>
+                        <p class="grid-timetable-description">Описание дыхательные практики. Описание дыхательные практики.</p>
+                    </div>
+                    <div class="grid-timetable">
+                        <p class="grid-timetable-data">27 июня, 10:00</p>
+                        <img class="img-grid" src="images/icons/weight.svg" alt="Комплексная разминка">
+                        <p class="grid-timetable-title">Комплексная разминка</p>
+                        <p class="grid-timetable-description">Подготовка тела перед физической нагрузкой.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!----ПОДПИШИТЕСЬ НА РАССЫЛКУ--->
+
+<div class="subscription">
+    <div class="container">
+        <div class="subscription-blok">
+            <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+        </div>
+        <form class="form-send-subscription" action="mailto:ваш адрес e-mail">
+            <div class="send">
+                <input type="email" value="Ваш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail" required>
+                <button type="submit" id="mc-embedded-subscribe" class="send-subscription-btn">Подписаться</button>
+            </div>
+            <div class="agreement">
+                <input type="checkbox" id="01" class="agreement-checkbox">
+                <label for="01" class="checkbox-text">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!----О КОМПАНИИ---->
+
+<div class="about-company" id="info-company">
+    <div class="container">
+        <div class="container-content">
+            <h3 class="about-company-title">О компании</h3>
+            <p class="about-company-text">Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с нами и вы сами увидите, что мы проводим не только онлайн-тренировки.</p>
+            <a href="#" class="about-company-btn">Записаться</a>
+            <div class="about-company-img"></div>
+            <div class="about-company-img-gradient"></div>
+        </div>
+        <div class="about-company-item">
+            <div class="company-benefits">
+                <p class="company-benefits-title">Экономия времени </p>
+                <p class="company-benefits-description">Не нужно тратить время на дорогу</p>
+            </div>
+            <div class="company-benefits">
+                <p class="company-benefits-title">Индивидуальный подход</p>
+                <p class="company-benefits-description">Внимание тренера пренадлежит только вам</p>
+            </div>
+            <div class="company-benefits">
+                <p class="company-benefits-title">Экономия денег</p>
+                <p class="company-benefits-description">Средняя цена одной тренировки - 700₽</p>
+            </div>
+            <div class="company-benefits">
+                <p class="company-benefits-title">Опытный персонал</p>
+                <p class="company-benefits-description">Стаж работы у наших тренеров от 5 лет</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!----FOOTER----> 
+   <footer id="footerTop">
+    <div class="container">
+        <div class="footer">
+            <p class="footer-logo"><a href="#" class="footer-logo-img"><img src="images/logo.svg" alt="Логотип"></a></p>
+            <nav>
+                <ul class="footer-ul">
+                    <li><a href="#upcoming-events">Мероприятия</a></li>
+                    <li><a href="#timetable-workout">Расписание</a></li>
+                    <li><a href="#info-company">О компании</a></li>
+                </ul>
+            </nav>
+            <div class="footer-site">
+                <h2 class="site">info@freefit.com</h2>
+            </div>
+            <div class="footer-social">
+                <p><a href="#" class="footer-social-in"><img src="images/icons/IN.svg" alt="Инстаграм"></a></p>
+                <p><a href="#" class="footer-social-fb"><img src="images/icons/FB.svg" alt="Фйсбук"></a></p>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p>© 2020, Все права защищены</p>
+            <p>Сделано в рамках курса учебной платформы <a href="#" class="footer-link">Annblok</a></p>
+        </div> 
+    </div>
+</footer>
+
+
+
+<!----Форма заявки на участие----> 
+<div class="modal-all">
+    <div id="application-maraphon" class="event-modal-maraphon">
+        <div class="application-close">
+            <a class="all-close" onclick="closeModal()"></a>
+        </div>
+        <h3>Заявка на участие «Марафон выносливости»</h3>
+        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+        <form class="form-vent-maraphon-modal" action="mailto:ваш адрес e-mail">
+            <input type="email" value="Ваш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail"
+                required>
+            <input type="tel" placeholder="Ваш номер телефона" required>
+            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
+        </form>
+    </div>
+    <div id="application-vebinar-1" class="event-modal-vebinar-1">
+        <div class="application-close">
+            <a class="all-close" onclick="closeModal()"></a>
+        </div>
+        <h3>Заявка на участие в вебинаре «Как стать тренером?»</h3>
+        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+        <form class="form-vent-modal-vebinar-1-modal" action="mailto:ваш адрес e-mail">
+            <input type="email" placeholder="Ваш e-mail" required>
+            <input type="tel" placeholder="Ваш номер телефона" required>
+            <a href="#" class="bg-button">Отправить</a>
+            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
+        </form>
+    </div>
+    <div id="application-vebinar-2" class="event-modal-vebinar-2">
+        <div class="application-close">
+            <a class="all-close" onclick="closeModal()"></a>
+        </div>
+        <h3>Заявка на участие в вебинаре «Йога, как стиль жизни»</h3>
+        <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+        <form class="form-vent-modal-vebinar-2-modal" action="mailto:ваш адрес e-mail">
+            <input type="email" value="Ваш e-mail" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Ваш e-mail"
+                required>
+            <input type="tel" placeholder="Ваш номер телефона" required>
+            <button type="submit" id="submit-modal" class="send-btn-modal">Подписаться</button>
+        </form>
+    </div>
+
+</div>
+    
+
+
+<script>
+    //Menu
+    function openModal() {
+        document.getElementById("application-maraphon").style.top = "0px";
+    }
+    function openModal() {
+        document.getElementById("application-vebinar-1").style.top = "0px";
+    }
+    function openModal() {
+        document.getElementById("application-vebinar-2").style.top = "0px";
+    }
+
+
+    function closeModal() {
+        document.getElementById("application").style.top = "-500px";
+    }
+
+
+</script>
 
 
 

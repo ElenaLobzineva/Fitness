@@ -234,70 +234,40 @@
 
 
 <div>
-    <div id="modal_maraphon" class="modal_event_maraphon">
-        <div class="modal-content">
-          <span class="close"></span>
-              <p class="modal-title">Заявка на участие
-                  «Марафон выносливости»</p>
-              <p class="modal-description">
-                  Заполните все поля, и мы пришлем информацию в ближайшее время
-              </p>
+    <div class="modal_event_maraphon_blackout">
+        <div id="modal_maraphon" class="modal_event_maraphon">
+            <div class="modal_maraphon_windows">
+                <h3 class="modal-title">Заявка на участие
+                    «Марафон&nbsp;выносливости»</h3>
+                <p class="modal-description">
+                    Заполните все поля, и мы пришлем информацию в ближайшее время
+                </p>
+            </div>
+            <form class="modal-form">
+                <div class="email_tel"> 
+                    <input type="email" class="modal-form-email" placeholder="Ваш e-mail" required>
+                    <input type="tel" class="modal-form-tel" placeholder="Ваш номер телефона" required>
+                </div>
+                <a href="#" class="send-button">Отправить</a>
+            </form>
+            <button class="modal-close" onclick="closeModal()"></button>
           </div>
-          <form class="modal-form">
-              <input type="email" placeholder="Ваш e-mail" required>
-              <input type="tel" placeholder="Ваш номер телефона" required>
-              <a href="#" class="bg-button">Отправить</a>
-          </form>
-          <button class="modal-close" onclick="closeModal()"></button>
         </div>
-
-
-
-
-   <!--- <div id="modal_vebinar-1" class="modal_event_vebinar-1">
-      <div class="modal-content">
-        <span class="close"></span>
-            <p class="modal-title">Заявка на участие
-                «Вебинар "Как стать тренером?"»</p>
-            <p class="modal-description">
-                Заполните все поля, и мы пришлем информацию в ближайшее время
-            </p>
-        </div>
-        <form class="modal-form">
-            <input type="email" placeholder="Ваш e-mail" required>
-            <input type="tel" placeholder="Ваш номер телефона" required>
-            <a href="#" class="bg-button">Отправить</a>
-        </form>
-      </div>
-
-    <div id="modal_vebinar-2" class="modal_event_vebinar-2">
-        <div class="modal-content">
-          <span class="close"></span>
-              <p class="modal-title">Заявка на участие
-                «Вебинар "Йога, как стиль жизни"»</p>
-              <p class="modal-description">
-                  Заполните все поля, и мы пришлем информацию в ближайшее время
-              </p>
-          </div>
-          <form class="modal-form">
-              <input type="email" placeholder="Ваш e-mail" required>
-              <input type="tel" placeholder="Ваш номер телефона" required>
-              <a href="#" class="bg-button">Отправить</a>
-          </form>
-        </div>
-</div>--> 
 
 
 <script>
-//Menu
+// Модальное окно
+
 function openModal() {
-    document.getElementById("modal_maraphon").style.top = "0px";
+   document.getElementById("modal_maraphon").style.left = "28%";
+   document.querySelector(".modal_event_maraphon_blackout").style.display = 'block';
 }
 
 function closeModal() {
-    document.getElementById("modal_maraphon").style.top = "-400px";
+   document.getElementById("modal_maraphon").style.left = "100%";
+   document.querySelector(".modal_event_maraphon_blackout").style.display = 'none';
 }
-        
+
 </script>
 </body>
 </html>

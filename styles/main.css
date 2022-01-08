@@ -654,3 +654,20 @@ body {
 .modal_event_vebinar-2 {
     display: none;
 }
+.modal_event_maraphon {
+    max-width: 600px;
+    display: block;
+    position: absolute;
+    background: #F3F3F3;
+    top: 10%;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    margin: 0 auto;
+    z-index: 2;
+    padding: 60px 50px 65px;
+    animation-name: animatetop;
+    animation-duration: 1s;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}

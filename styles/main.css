@@ -339,12 +339,14 @@ body {
  .grid-timetable-description {
      display: none;
      max-width: 300px;
-     opacity: 0.7;
      margin-left: 20px;
      line-height: 150%;
+     color: #2B3541;
  }
  .grid-timetable:hover {
     border: none;
+    background: rgba(243, 243, 243, .5);
+    box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
  }
  .grid-timetable:hover 
  .grid-timetable-description {
@@ -610,8 +612,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-    font-size: 14px;
+    color: #B7BABE;
+}
+.footer-linc {
     font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
     color: #B7BABE;
 }
 .footer-site {
@@ -626,6 +632,7 @@ body {
     z-index: 1;
     margin-top: 11px;
 }
+
 .site::before {
     position: absolute;
     content: " ";
@@ -638,72 +645,104 @@ body {
     border-radius: 100%;
     z-index: -1;
 }
-.footer-link {
-    font-size: 14px;
-    font-weight: 400;
-    color: #B7BABE;
-}
-.event-modal-maraphon {
-    display: none;
-}
-.event-modal-vebinar-1 {
-    display: none;
-}
-.event-modal-vebinar-2 {
-    display: none;
-}
-.all-close {
+
+.modal_event_maraphon_blackout{
     content: '';
-    background: url(../images/icons/close.svg) no-repeat center / cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: none;
+ }
+#modal_maraphon {
+    max-width: 600px;
+    position: absolute;
+    background: #F3F3F3;
+    left: -100%;
+    z-index: 5;
+}
+.modal_maraphon_windows {
+    padding: 60px 50px 82px;
+ }
+ .modal-title::before {
+    top: 23px;
+    left: 17px;
+    position: absolute;
+    content: '';
+    background-color: #fbf138;
+    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
+    padding: 27px;
+    border-radius: 30px;
+    z-index: -1;
+}
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    border: none;
+}
+.modal-form-email {
+    border: none;
+}
+.modal-form-tel {
+    border: none;
+    padding: 19px 372px 25px;
+}
+.modal-form-email::-webkit-input-placeholder {
+    font-size: 18px;
+    opacity: 0.3;
+    color: #2B3541;
+}
+.modal-form-tel::-webkit-input-placeholder {
+    font-size: 18px;
+    opacity: 0.3;
+    color: #2B3541;
+}
+
+.modal-close{
     width: 20px;
     height: 20px;
+    background-color: transparent;
+    background-image: url(../images/icons/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     border: none;
-    position: absolute;
-    top: 30px;
-    right: 30px;
     cursor: pointer;
-    transition: 0.3s;
-}
-#application-maraphon:target {
-     display: block;
-
-}
-
-
- #application-maraphon {
-    max-width: 600px;
-    background-color: #F3F3F3;
-    text-align: center;
     position: absolute;
-    left: 25px;
-    right: 0;
-    margin: 20px auto 0;
-    padding: 60px 30px;
-    box-sizing: border-box;  
-    top: -500; 
+    top: 20px;
+    right: 20px;
 }
-.application-vebinar-1 {
-    max-width: 600px;
-    background-color: #F3F3F3;
-    text-align: center;
-    position: absolute;
-    left: 25px;
-    right: 0;
-    margin: 20px auto 0;
-    padding: 60px 30px;
-    box-sizing: border-box;  
-    top: -500; 
+.send-button {
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #FBF138;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    font-weight: 700;
+    padding: 33px 207px;
+    text-decoration: none;
+    margin-top: 20px;
 }
-.application-vebinar-2 {
-    max-width: 600px;
-    background-color: #F3F3F3;
-    text-align: center;
-    position: absolute;
-    left: 25px;
-    right: 0;
-    margin: 20px auto 0;
-    padding: 60px 30px;
-    box-sizing: border-box;  
-    top: -500; 
+.send-button:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+    cursor: pointer;
+}
+.modal-title {
+    width: 30vw;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+.modal-description {
+    font-size: 18px;
+    line-height: 150%;
 }
 

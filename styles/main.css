@@ -198,6 +198,9 @@ body {
     opacity: 1;
     text-decoration: none;
 }
+.box-event-gradient:hover .button-participate {
+    display: none;
+}
 .participate {
     font-size: 16px;
     font-weight: 700;
@@ -646,67 +649,52 @@ body {
     z-index: -1;
 }
 
-.modal_event_maraphon_blackout{
-    content: '';
-    background-color: rgba(0, 0, 0, 0.8);
+
+/*----MODAL----*/
+
+
+.event_modal {
     position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    z-index: 4;
-    display: none;
- }
-#modal_maraphon {
-    max-width: 600px;
-    position: absolute;
-    background: #F3F3F3;
-    left: -100%;
-    z-index: 5;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: all .8s ease 0s;
 }
-.modal_maraphon_windows {
-    padding: 60px 50px 82px;
- }
- .modal-title::before {
-    top: 23px;
-    left: 17px;
-    position: absolute;
-    content: '';
-    background-color: #fbf138;
-    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
-    padding: 27px;
-    border-radius: 30px;
-    z-index: -1;
-}
-.modal-form {
+.event_modal:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  .event_modal:target .modal_content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+  }
+  .modal_windows {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 0 auto;
+    min-height: 100%;
     align-items: center;
-    border: none;
-}
-.modal-form-email {
-    border: none;
-}
-.modal-form-tel {
-    border: none;
-    padding: 19px 372px 25px;
-}
-.modal-form-email::-webkit-input-placeholder {
-    font-size: 18px;
-    opacity: 0.3;
-    color: #2B3541;
-}
-.modal-form-tel::-webkit-input-placeholder {
-    font-size: 18px;
-    opacity: 0.3;
-    color: #2B3541;
-}
-
-.modal-close{
-    width: 20px;
-    height: 20px;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .5s ease 0s;
+  }
+  .modal_content {
+    width: 600px;
+    background: #F3F3F3;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    padding: 60px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .modal-close {
+    width: 22px;
+    height: 22px;
     background-color: transparent;
     background-image: url(../images/icons/close.svg);
     background-repeat: no-repeat;
@@ -716,6 +704,47 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+  .modal-title {
+    width: 30vw;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    
+}
+.modal-title::before {
+    top: 25px;
+    left: 185px;
+    position: absolute;
+    content: '';
+    background-color: #fbf138;
+    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
+    padding: 27px;
+    border-radius: 30px;
+    z-index: -1;
+}
+.modal-description {
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.modal-form > input {
+    display: block;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    padding: 23px 0 23px 17px;
+    width: 90%;
+}
+.modal-form  input[type="email"] {
+    margin-bottom: 20px;
+}
+input[type="tel"] {
+    margin-bottom: 40px;
 }
 .send-button {
     font-size: 16px;
@@ -725,24 +754,12 @@ body {
     font-weight: 700;
     padding: 33px 207px;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 20px; 
 }
 .send-button:hover {
     background-color: #2B3541;
     color: #FBF138;
     cursor: pointer;
 }
-.modal-title {
-    width: 30vw;
-    font-weight: 700;
-    font-size: 28px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-}
-.modal-description {
-    font-size: 18px;
-    line-height: 150%;
-}
+
 

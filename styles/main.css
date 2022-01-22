@@ -48,7 +48,6 @@ body {
 }
 .text { 
    max-width: 676px;
-   max-height: ;
    margin-top: 214px;
 }
 .banner-workout {
@@ -444,7 +443,8 @@ body {
     line-height: 150%;
     font-weight: 400;
     color: #8F949A;
-    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
 }
 .agreement-checkbox:checked,
 .agreement-checkbox:not(:checked){

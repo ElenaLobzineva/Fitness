@@ -833,79 +833,13 @@ body {
 
 /*---------MEDIA-------*/
 
-@media (max-width: 1370px) {
-    .box {
-        right: 85px;
-    }
-    .text {
-        width: 465px;
-    }
-    .subtitle {
-        margin-top: 30px;
-    }
-    .about-company-text {
-        margin-left: 0;
-    }
-
-    .about-company-img {
-        width: 40vw;
-        height: 290px;
-    }
-    .about-company-flex {
-        margin-bottom: 65px;
-    }
-    .subscription-title::before {
-        top: -20px;
-        left: 10px;
-        height: 53px;
-        width: 53px;
-    }
-    .company-item {
-        flex-wrap: wrap;
-        gap: 20px 15%;
-        justify-content: space-around;
-    }
-    .company-achiments {
-        width: 35%;
-    }
-    .company-achiments:last-child {
-        flex: 0 0 35%;
-    }
-    .subscription-btn {
-        padding: 20px 35px;
-    }
-    .about-company {
-        margin-top: 120px;
-        margin-bottom: 100px;
-    }
-    .social-footer {
-        display: none;
-    }
-    .social-footer-mobile {
-        display: flex;
-        justify-content: space-between;
-    }
-    .footer-email::before {
-        bottom: 12px;
-    }
-    .footer-nav {
-        flex-basis: 550px;
-        gap: 125px;
-    }
-    h1,
-    h2,
-    h3 {
-        font-size: 35px;
-    }
-    p {
-        font-size: 17px;
-    }
-    .footer-text {
-        font-size: 12px;
-    }
-    .footer-front {
-        font-size: 12px;
+@media (max-width: 1520px) {
+    .box-image {
+        right: -20px;
     }
 }
-
-
+@media (max-width: 1440px) {
+    .title {
+        font-size: 45px;
+    }
+}

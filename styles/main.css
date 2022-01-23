@@ -21,6 +21,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 .header-logo {
     flex-basis: 20%;
 }
@@ -53,7 +54,7 @@ body {
 .banner-workout {
     display: flex;
     position: relative;
-    max-height: 852px;
+    width: 100%;
 }
 .title {
     display: inline-block;
@@ -142,7 +143,7 @@ body {
    top: 3px;
    right: -103px;
    width: 996px;
-   height: 100%
+   height: 852px;
 }
 .timetable-flex {
     display: flex;
@@ -767,7 +768,7 @@ body {
 
 /*---BURGER---*/
 
-.burger {
+.header-burger {
     width: 29px;
     height: 22px;
     cursor: pointer;
@@ -776,6 +777,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     border: none;
+    display: block;
 }
 #modal {
     background-color: #F3F3F3;
@@ -815,13 +817,7 @@ body {
 #modal .logo-header {
     margin-top: 0px;
 }
-.burger-close {
-    width: 20px;
-    height: 19px;
-    top: 30px;
-    right: 8px;
-}
-.close {
+.burger-close  {
     background-image: url(../images/icons/close-burger.svg);
     background-repeat: no-repeat;
     position: absolute;
@@ -829,6 +825,10 @@ body {
     cursor: pointer;
     background-color: transparent;
     background-size: contain;
+    width: 20px;
+    height: 19px;
+    top: 30px;
+    right: 8px;
 }
 
 /*---------MEDIA-------*/
@@ -840,6 +840,13 @@ body {
 }
 @media (max-width: 1440px) {
     .title {
-        font-size: 45px;
+        font-size: 33px;
     }
-}
+    .text {
+        max-width: 550px;
+    }
+    .box {
+        right: 50px;
+    }
+
+

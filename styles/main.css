@@ -13,9 +13,9 @@ body {
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     display: block;
-    width: 97px;
-    height: 30px;
-} 
+    width: 6em;
+    height: 2em;
+}
 
 .header {
     display: flex;
@@ -51,14 +51,10 @@ body {
    max-width: 676px;
    margin-top: 214px;
 }
-.banner-workout {
-    display: flex;
-    position: relative;
-    width: 100%;
-}
+
 .title {
     display: inline-block;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 125%;
     text-transform: uppercase;
@@ -142,8 +138,9 @@ body {
    position: absolute;
    top: 3px;
    right: -103px;
-   width: 996px;
-   height: 852px;
+   max-width: 125%;
+   max-height: 100%;
+
 }
 .timetable-flex {
     display: flex;
@@ -769,8 +766,8 @@ body {
 /*---BURGER---*/
 
 .header-burger {
-    width: 29px;
-    height: 22px;
+    min-width: 6.5em;
+    min-height: 1.5em;
     cursor: pointer;
     background-image: url(../images/icons/burger.svg);
     background-color: transparent;
@@ -778,6 +775,7 @@ body {
     background-size: contain;
     border: none;
     display: block;
+    margin-left: 36px;
 }
 #modal {
     background-color: #F3F3F3;
@@ -830,23 +828,50 @@ body {
     top: 30px;
     right: 8px;
 }
+.workout-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    }
+}
 
 /*---------MEDIA-------*/
 
+
+
+
 @media (max-width: 1520px) {
-    .box-image {
-        right: -20px;
+    .banner-workout {
+        width: 88%;
     }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
+    .workout-box {
+        flex-direction: column;
+    }
+}
+@media (max-width: 1250px) {
+    .banner-workout {
+        width: 75%;
+    }
     .title {
-        font-size: 33px;
+        font-size: 2.4rem;
     }
-    .text {
-        max-width: 550px;
+    .box-image {
+        right: -200px;
     }
-    .box {
-        right: 50px;
+}
+@media (max-width: 768px) {
+    .header-ul {
+        display: none;
     }
+}
+@media (min-width: 769px) {
+    .header-burger {
+        display: none;
+    }
+
+
+
 
 

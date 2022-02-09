@@ -159,9 +159,10 @@ body {
     margin-left: 27px;
 }
 .box-event {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     gap: 20px;
+    grid-template-rows: 600px 1fr;
+    grid-template-areas: "a b c";
 }
 .event-title {
     font-size: 28px;
@@ -187,6 +188,10 @@ body {
     width: 100%;
     height: 100%;
     transition: .2s;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    
 }
 .box-event-gradient:hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);
@@ -213,27 +218,39 @@ body {
     background-color: #2B3541;
 }
 .event-maraphon {
-    background-image: url(../images/files/@1x/maraphon.png);
-    width: 367px;
-    height: 600px;
+    background-image: url(../images/files/@2x/maraphon@2x.png);
     background-repeat: no-repeat;
+    display: block;
     background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    grid-area: a;
+    transition: 0.2s;
     position: relative;
 }
 .event-vebinar-1 {
-    background-image: url(../images/files/@1x/Vebinar\ 1.png);
-    width: 367px;
-    height: 600px;
+    background-image: url(../images/files/@2x/Vebinar\ 1@2x.png);
     background-repeat: no-repeat;
+    display: block;
     background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    grid-area: b;
+    transition: 0.2s;
     position: relative;
 }
 .event-vebinar-2 {
-    background-image: url(../images/files/@1x/Vebinar\ 2.png);
-    width: 367px;
-    height: 600px;
+    background-image: url(../images/files/@2x/Vebinar\ 2@2x.png);
     background-repeat: no-repeat;
+    display: block;
     background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    grid-area: c;
+    transition: 0.2s;
     position: relative;
 }
 .events-headers h3 {
@@ -863,26 +880,43 @@ body {
     }
 }
 @media (max-width: 1250px) {
-    .banner-workout {
-        width: 75%;
+    .workout-box {
+        width: 88%;
     }
     .title {
-        font-size: 2.4rem;
+        font-size: 2em;
+        max-width: 500px;
     }
     .box-image {
-        right: -200px;
+        right: -100px;
     }
+
 }
 @media (max-width: 768px) {
     .header-ul {
         display: none;
+    }
+    .box-event {
+        display: grid;
+        grid-template-rows: 309px 336px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "a b"
+            "c c";
+        gap: 10px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .event-vebinar-2 {
+
+        background-position: center top;
     }
 }
 @media (min-width: 769px) {
     .header-burger {
         display: none;
     }
-
 
 
 

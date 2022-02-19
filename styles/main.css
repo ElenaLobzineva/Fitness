@@ -568,6 +568,9 @@ html {
  .about-company {
     margin-top: 15.5rem;
 }
+.company-text {
+    max-width: 40rem;
+}
 .container-content {
     position: relative;
     margin-bottom: 11rem;
@@ -579,27 +582,11 @@ html {
     top: 0px;
     right: 0px;
 }
-.company-img {
-    position: absolute;
-    width: auto;
-    height: 33.6rem;
-    right: 0;
-    top: 0;
-}
-.about-company-img {
-    background-image: url("../images/files/@1x/trainer.png");
-    max-width: 58rem;
-    max-height: 33.4rem;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
+
 
 .about-company-img-gradient {
     display: block; 
-    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../images/files/@2x/trainer@2x.png);
     width: 58rem;
     height: 33.4rem;
     background-position: center;
@@ -639,13 +626,10 @@ html {
 }
 .about-company-item {
     display: flex;
-    justify-content: space-between;
     gap: 6%;
     margin-top: 14rem;
     padding-left: 0;
-}
-.company-benefits {
-    min-width: 25rem;
+    flex-wrap: nowrap;
 }
 .company-benefits-title {
     font-size: 1.8rem;
@@ -673,15 +657,16 @@ html {
     display: flex;
     align-items: center;
     margin-top: 18.5rem;
+    flex-wrap: wrap;
 }
 .footer-body {
-    background-color: #F3F3F3;
-}
-.footer-logo {
-    flex-basis: 20%;
+    position: relative;
+    background: #F3F3F3;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 0;
 }
 .footer nav {
-    flex-basis: 125%;
     margin-bottom: 1.7rem;
 }
 .footer-ul {
@@ -769,6 +754,12 @@ html {
     box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
     border-radius: 100%;
     z-index: -1;
+}
+.footer-contacts {
+    display: flex;
+    align-items: center;
+    gap: 61px;
+    justify-content: end;
 }
 
 
@@ -906,7 +897,7 @@ html {
     top: -600px;
     left: 0;
     right: 0;
-    margin: 20px auto 0;
+    margin: 7.1rem auto 0;
     transition: 0.6s;
     padding: 20px 15px;
     box-sizing: border-box;
@@ -1030,12 +1021,25 @@ html {
     .header-burger {
         margin-left: 5.5rem
     }
-    .about-company-item {
-        max-width: 758px;
-        gap: 0px;
-        margin-bottom: 25px;
-        margin-top: 8px;
-        flex-wrap: wrap;
+    .form-send-subscription {
+        padding-bottom: 42px;
+    }
+    .about-company {
+        margin-top: 9.6rem;
+    }
+    .about-company-title {
+        font-size: 2.5rem;
+    }
+    .about-company-text {
+        font-size: 1.5rem;
+        padding-bottom: 4rem;
+        max-width: 30rem;
+    }
+  
+    .about-company-img-gradient {
+        background-size: cover;
+        max-width: 35rem;
+        max-height: 23rem;
     }
     .text {
         margin-top: 5.4rem;
@@ -1107,11 +1111,15 @@ html {
     .event-vebinar-2 {
         background-position: center top;
     }
-    .company-flex {
-        display: flex;
-        justify-content: start;
-        gap: 1rem;
-        flex-direction: column;
+    .container-content {
+        margin-bottom: 6rem;
+    }
+    .about-company-item {
+        flex-wrap: wrap;
+        margin-top: 0rem;
+        justify-content: normal;
+        gap: 17%;
+        margin-top: 6rem;   
     }
     .event-data {
         font-size: 1.3rem;
@@ -1121,6 +1129,9 @@ html {
     .event-title {
     font-size: 1.6rem;
     max-width: 18rem;
+    }
+    .company-benefits-title {
+        font-size: 1.7rem;
     }
     .participate {
         display: none;
@@ -1163,8 +1174,7 @@ html {
     .send {
         flex-direction: column;
         justify-content: center;
-        margin-top: 25px;
-        
+        margin-top: 25px;    
     }
     .form-send-subscription {
         padding-top: 0;
@@ -1175,6 +1185,30 @@ html {
     .send-subscription-btn {
         margin-top: 5rem;
     }
+    .footer {
+        margin-top: 3.5rem; 
+    }
+    .footer-ul a {
+        font-size: 1.2rem;
+    }
+    .footer-ul {
+        gap: 2.5rem;
+    }
+    .footer nav {
+        margin-left: 29rem;
+    }
+    .footer-contacts {
+        margin-left: 47rem;
+        gap: 0;
+    }
+    .site {
+        font-size: 1.3rem;
+    }
+    .site::before {
+        right: 11rem;
+    }
+    .modal-title::before {
+        left: 20.5rem;
 }
 
 @media (min-width: 769px) {

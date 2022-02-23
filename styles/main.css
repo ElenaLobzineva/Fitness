@@ -83,11 +83,11 @@ html {
 }
 .text { 
    max-width: 67.6rem;
-   margin-top: 21.4rem;
+   margin-top: 24.4rem;
 }
 .title {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 125%;
     text-transform: uppercase;
@@ -136,7 +136,7 @@ html {
     height: 5.5rem;
     border: none;
     background-color: transparent;
-    margin-top: 17.5rem;
+    margin-top: 24.5rem;
     cursor: pointer;
 }
 .text-right {
@@ -148,10 +148,10 @@ html {
    width: 100%;
    gap: 2rem;
    position: absolute;
-   top: 2rem;
+   top: 5rem;
    z-index: -1;
-   right: -6.5rem;
-   height: 100%;
+   right: -25.5rem;
+   height: 94%;
 }
 .box-gradient-left {
     background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
@@ -303,7 +303,7 @@ html {
 .timetable {
     display: flex;
     justify-content: space-between;
-    margin-top: 13.5rem;
+    margin-top: 11.5rem;
 }
 .timetable-title {
     font-size: 4rem;
@@ -432,7 +432,7 @@ html {
  .subscription-blok {
     max-width: 60rem;
     margin: auto;
-    padding: 8rem 0 8.2rem;
+    padding: 8rem 0 0.2rem;
     position: relative;
     z-index: 1;
 }
@@ -587,7 +587,7 @@ html {
 .about-company-img-gradient {
     display: block; 
     background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../images/files/@2x/trainer@2x.png);
-    width: 60%;
+    width: 51%;
     height: 33.4rem;
     background-position: center;
     background-size: cover;
@@ -603,8 +603,8 @@ html {
 .about-company-text {
     font-size: 1.8rem;
     line-height: 150%;
-    max-width: 47rem;
-   padding-bottom: 1rem;
+    width: 49rem;
+   padding-bottom: 4rem;
 }
 .about-company-btn {
     font-size: 1.6rem;
@@ -627,7 +627,7 @@ html {
 .about-company-item {
     display: flex;
     gap: 6%;
-    margin-top: 14rem;
+    margin-top: 12rem;
     padding-left: 0;
     flex-wrap: nowrap;
 }
@@ -656,7 +656,7 @@ html {
 .footer {
     display: flex;
     align-items: center;
-    margin-top: 18.5rem;
+    margin-top: 2.5rem;
     flex-wrap: wrap;
 }
 .footer-body {
@@ -731,7 +731,6 @@ html {
     color: #B7BABE;
 }
 .footer-site {
-    margin-right: 5.4rem;
     margin-bottom: 1.5rem;
 }
 .site {
@@ -955,24 +954,29 @@ html {
 .workout-box {
     display: flex;
     position: relative;
-    width: 83%;
+    width: 82%;
     }
 }
 
 /*---------MEDIA-------*/
 
-
-
-
-@media (max-width: 1520px) {
-    .banner-workout {
-        width: 88%;
+@media (min-width: 769px) {
+    .header-burger {
+        display: none;
+    }
+}
+@media (max-width: 1500px) {
+    .workout-box {
+        width: 75%;
+    }
+    .title {
+        font-size: 4.7rem;
+    }
+    .box {
+        right: -21.5rem;
     }
 }
 @media (max-width: 1250px) {
-    .title {
-        max-width: 50rem;
-    }
     .timetable-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 333px;
@@ -1001,12 +1005,24 @@ html {
         grid-column: 2 / 3;
         grid-row: 3 / 4;
     }
+    .box {
+        height: 77%;
+        right: -9rem;
+    }
+    .box-image {
+        right: -15.3rem;
+    }
+    .title {
+        font-size: 3.7rem;
+        max-width: 50rem;
+    }
 
 }
 @media (max-width: 1000px) {
     .box {
-        right: 0;
-        height: 85%;
+        right: -5rem;
+        height: 75%;
+        top: 3rem;
     }
     .text-right {
         margin-left: 4rem;
@@ -1028,17 +1044,12 @@ html {
     }
 }
 @media (max-width: 950px) {
-    .box {
-        height: 77%;
-    }
-    .box-image {
-        max-height: 87%;
-    }
+
     .text {
         margin-top: 10.4rem;
     }
-    .box-image {
-        top: 34px;
+    .header-ul a {
+        font-size: 1.5rem;
     }
     .event-title {
         font-size: 2.1rem;
@@ -1053,6 +1064,23 @@ html {
     .about-company {
         margin-top: 11.5rem;
     }
+   .participate {
+    padding: 2rem 1.7rem;
+   }
+   .header-ul {
+       gap: 3.5rem;
+   }
+   .banner-text {
+    padding: 2rem 1.5rem;
+    font-size: 1.4rem;
+   }
+   .subtitle {
+    font-size: 3rem;
+   }
+   .box {
+    right: -1rem;
+    height: 60%;
+}
     
 }
 @media (max-width: 768px) {
@@ -1256,12 +1284,3 @@ html {
         gap: 1.2rem;
     }
 }
-
-@media (min-width: 769px) {
-    .header-burger {
-        display: none;
-    }
-
-
-
-

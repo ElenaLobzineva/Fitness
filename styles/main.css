@@ -965,6 +965,7 @@ html {
         display: none;
     }
 }
+
 @media (max-width: 1500px) {
     .workout-box {
         width: 75%;
@@ -1080,6 +1081,7 @@ html {
    .box {
     right: -1rem;
     height: 60%;
+    width: 71%;
 }
 .about-company-text {
     width: 40rem;
@@ -1142,7 +1144,7 @@ html {
         margin-left: 0;
     }
     .box {
-        height: 80%;
+        height: 83%;
         max-width: 24rem;
     }
     .box-image {
@@ -1281,3 +1283,10 @@ html {
         gap: 1.2rem;
     }
 }
+@media (max-width: 750px) {
+    .workout-box {
+        flex-direction: column;
+    }
+}
+
+

@@ -170,7 +170,7 @@ html {
    position: absolute;
    top: 3px;
    right: -10.3rem;
-   max-width: 125%;
+
    max-height: 100%;
 
 }
@@ -649,13 +649,15 @@ html {
 .footer-logo-img {
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     display: block;
     width: 9.7rem;
-    height: 5.6rem;  
+    height: 3rem;
 } 
 .footer-item {
     display: flex;
     gap: 7rem;
+    justify-content: center;
 }
 
 .footer-cover {
@@ -683,7 +685,7 @@ html {
 }
 .footer-ul a:hover {
     padding-bottom: .8rem;
-    border-bottom: #2B3541 1px solid;
+    border-bottom: #2B3541 1px solid ;
 }
 .footer-social {
     display: flex;
@@ -886,8 +888,8 @@ html {
 /*---BURGER---*/
 
 .header-burger {
-    min-width: 6.5em;
-    min-height: 2.5em;
+    width: 4.5rem;
+    height: 2.5rem;
     cursor: pointer;
     background-image: url(../images/icons/burger.svg);
     background-color: transparent;
@@ -1037,7 +1039,7 @@ html {
         margin-left: 4rem;
     }
     .events-headers {
-        margin-top: 7rem;
+        margin-top: 9rem;
     }
     .text {
         max-width: 40rem;
@@ -1051,15 +1053,15 @@ html {
     .timetable {
         margin-top: 0rem;
     }
-    .arrow {
-        display: none;
-    }
     .text {
         margin-top: 7rem;
     }
     .box {
         right: 0rem;
         max-width: 50%;
+    }
+    .box-image {
+        max-width: 143%;
     }
 }
 @media (max-width: 950px) {
@@ -1090,7 +1092,7 @@ html {
        gap: 3.5rem;
    }
    .banner-text {
-       padding: 2rem 1.5rem;
+       padding: 2rem 3.5rem;
        font-size: 1.4rem;
    }
    .subtitle {
@@ -1101,12 +1103,19 @@ html {
     }
     .box-image {
         right: -12.3rem;
-        max-width: 148%;
+        max-width: 179%;
     }
     .about-company-text {
         width: 40rem;
     }
     .footer-cover {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    
+    .footer-contacts {
+        gap: 3.3rem;
+        align-self: flex-end;
     }
 }
 @media (max-width: 768px) {
@@ -1147,7 +1156,7 @@ html {
         margin-top: 4rem;   
     }
     .text {
-        margin-top: 5.4rem;
+        margin-top: 4.4rem;
     }
     .title {
         font-size: 2.5rem;
@@ -1164,7 +1173,6 @@ html {
     .text-right {
         margin-left: 0;
     }
-
     .header-ul {
         display: none;
     }
@@ -1179,6 +1187,13 @@ html {
     }
     .events-headers h3 {
         font-size: 2.5rem;
+    }
+    .box {
+        height: 87%;
+    }
+    .box-image {
+        max-width: 140%;
+        top: 7rem;
     }
     .box-event {
         display: grid;
@@ -1197,7 +1212,6 @@ html {
     .container-content {
         margin-bottom: 6rem;
     }
-  
     .event-data {
         font-size: 1.3rem;
         margin-top: 1.4rem;
@@ -1271,15 +1285,20 @@ html {
     .footer {
         margin-top: 2.5rem; 
     }
-    .footer-ul a {
-        font-size: 1.2rem;
-    }
     .footer-ul {
-        gap: 2.5rem;
+        gap: 1.5rem;
     }
-
+    .footer-ul a {
+        font-size: 1.5rem;
+    }
     .site {
         font-size: 1.2rem;
+    }
+    .footer-site {
+        font-size: 1.2rem;
+    }
+    .footer-site::before {
+        right: 10.2rem;
     }
     .site::before {
         right: 10rem;
@@ -1290,8 +1309,12 @@ html {
     .footer-social {
         gap: 1.2rem;
     }
+    
 }
 @media (max-width: 750px) { 
+    .arrow {
+        display: none;
+    }
     .workout-box {
         flex-direction: column;
     }
@@ -1304,6 +1327,7 @@ html {
     }
     .box-image {
         right: 0rem;
+        top: 0%;
     }
     .events-headers {
         margin-top: 34rem;
@@ -1330,7 +1354,6 @@ html {
         max-width: 41rem;
     }
 }
-
 @media (max-width: 550px) {
     .title {
         font-size: 2.2rem;
@@ -1383,9 +1406,28 @@ html {
         .site::before {
             right: 10rem;
         }
+
         .footer-rights {
             justify-content: center;
             flex-wrap: wrap;
+        }
+        .footer-item {
+            gap: 2rem;
+        }
+        .footer-cover {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-item {
+            flex-direction: column;
+            align-items: center;
+            gap: 41px;
+        }
+        .footer-contacts {
+            align-self: initial;
+            justify-content: space-between;
+            width: 100%;
+            padding-left: 15px;
         }
 }
 @media (max-width: 360px) {

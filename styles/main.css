@@ -721,7 +721,6 @@ html {
     transform: scale(1.2);
     opacity: 1;
 }
-
 .footer-ul a {
     font-size: 1.8rem;
     color: #2B3541;   
@@ -739,9 +738,6 @@ html {
     line-height: 150%;
     color: #B7BABE;
 }
- {
-    
-}
 .footer-site {
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -753,7 +749,6 @@ html {
     text-decoration: none;
     color: #2B3541;   
 }
-
 .footer-site::before {
     position: absolute;
     content: " ";
@@ -966,7 +961,6 @@ html {
     display: flex;
     position: relative;
     width: 82%;
-    }
 }
 
 /*---------MEDIA-------*/
@@ -1431,6 +1425,8 @@ html {
         .footer-ul a {
             font-size: 1.2rem;
         }
+        .event-title {
+            margin-left: 1.5rem;
 }
 @media (max-width: 360px) {
     .title {
@@ -1466,5 +1462,42 @@ html {
         font-size: 1.5rem;
     }
    
+}
+@media (max-width: 340px) {
+    .banner-text {
+        padding: 2rem 0.5rem;
+    }
+    .events-headers {
+        margin-top: 17rem;
+    }
+    .events-headers h3 {
+        font-size: 2rem;
+    }
+    .subscription {
+        margin-top: 8rem;
+    }
+    .footer-ul a {
+        font-size: 1.1rem;
+    }
+    .about-company {
+        margin-top: 5.5rem;
+    }
+    .about-company-text {
+        padding-bottom: 2rem;
+    }
+    .event-title {
+        font-size: 1.2rem;
+        margin-left: 1.7rem;
+    }
+    .timetable-title {
+        font-size: 2rem;
+    }
+    .timetable-data {
+        font-size: 1.5rem;
+    }
+    .box {
+        height: 23rem;
+      
+    }
 }
 

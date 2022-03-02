@@ -1427,7 +1427,9 @@ html {
             align-self: initial;
             justify-content: space-between;
             width: 100%;
-            padding-left: 15px;
+        }
+        .footer-ul a {
+            font-size: 1.2rem;
         }
 }
 @media (max-width: 360px) {
@@ -1463,6 +1465,6 @@ html {
     .grid-timetable-title {
         font-size: 1.5rem;
     }
-
+   
 }
 

@@ -329,7 +329,7 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 250px 31px 63px 279px;
-    gap: 2.7rem;
+    gap: 20px;
 }
 .grid-timetable {
     border: 1px solid #000;
@@ -337,7 +337,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 95%;
     position: relative;
    
     transition: .3s linear border;
@@ -700,7 +700,7 @@ html {
 }
 .about-company-item {
     display: flex;
-    gap: 6%;
+    gap: 3%;
     margin-top: 12rem;
     padding-left: 0;
     flex-wrap: nowrap;
@@ -806,6 +806,7 @@ html {
     justify-content: space-between;
     margin-bottom: 1.6rem;
     color: #B7BABE;
+    font-size: 15px;
 }
 .footer-linc {
     font-weight: 400;
@@ -1448,7 +1449,9 @@ html {
         font-size: 1.6rem;
         max-width: 41rem;
     }
-
+    .footer-rights {
+        font-size: 12px;
+    }
 }
 @media (max-width: 550px) {
 
@@ -1496,26 +1499,32 @@ html {
     .grid-timetable:nth-child(1) img {
         width: 4rem;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
     .grid-timetable:nth-child(2) img {
         width: 3rem;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
     .grid-timetable:nth-child(3) img {
         width: 5rem;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
     .grid-timetable:nth-child(4) img {
         width: 4rem;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
     .grid-timetable:nth-child(5) img {
         width: 4rem;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
     .grid-timetable:nth-child(6) img {
         width: 5rem;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
     .grid-menu-text{
         display: flex;
@@ -1578,6 +1587,7 @@ html {
         .footer-rights {
             justify-content: center;
             flex-wrap: wrap;
+            font-size: 10px;
         }
         .footer-item {
             gap: 2rem;

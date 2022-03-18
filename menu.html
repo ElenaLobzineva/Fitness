@@ -60,10 +60,9 @@
                     </span>
                     <div class="text-right">
                         <p class="desc">в области спортивной физиологии и нутрициологии</p>
-                        <a href="#timetable-workout" class="banner-text" >Узнать подробнее</a>
+                        <a href="#timetable-workout" class="banner-text">Узнать подробнее</a>
                     </div>
-                    <button href="#timetable-workout" class="arrow"></button>
-                
+                    <a href="#timetable-workout" class="arrow"></a>
                 </div>
                 <div class="box">
                     <div class="box-gradient-left"></div>
@@ -235,23 +234,23 @@
                     </div>                        
                 </div>
                 <div class="about-company-item">
+                    <div class="company-benefits">
+                        <p class="company-benefits-title">Экономия времени </p>
+                        <p class="company-benefits-description">Не нужно тратить время на дорогу</p>
+                    </div>
                 <div class="company-benefits">
-            <p class="company-benefits-title">Экономия времени </p>
-            <p class="company-benefits-description">Не нужно тратить время на дорогу</p>
-        </div>
-        <div class="company-benefits">
-            <p class="company-benefits-title">Индивидуальный подход</p>
-            <p class="company-benefits-description">Внимание тренера пренадлежит только вам</p>
-        </div>
-        <div class="company-benefits">
-            <p class="company-benefits-title">Экономия денег</p>
-            <p class="company-benefits-description">Средняя цена одной тренировки - 700₽</p>
-        </div>
-        <div class="company-benefits">
-            <p class="company-benefits-title">Опытный персонал</p>
-            <p class="company-benefits-description">Стаж работы у наших тренеров от 5 лет</p>
-        </div>
-    </div>
+                        <p class="company-benefits-title">Индивидуальный подход</p>
+                        <p class="company-benefits-description">Внимание тренера пренадлежит только вам</p>
+                </div>
+                <div class="company-benefits">
+                        <p class="company-benefits-title">Экономия денег</p>
+                        <p class="company-benefits-description">Средняя цена одной тренировки - 700₽</p>
+                </div>
+                <div class="company-benefits">
+                        <p class="company-benefits-title">Опытный персонал</p>
+                        <p class="company-benefits-description">Стаж работы у наших тренеров от 5 лет</p>
+                </div>
+            </div>
     <div class="company-mobile">
                      
         </div>
@@ -275,7 +274,7 @@
             <div class="footer-box">
                 <div class="footer-cover">
                     <div class="footer-item">
-                        <a href="#" class="footer-logo-img"></a>
+                         <a href="#" class="footer-logo-img"></a>
                             <ul class="footer-ul">
                             <li><a href="#upcoming-events">Мероприятия</a></li>
                             <li><a href="#timetable-workout">Расписание</a></li>
@@ -291,8 +290,8 @@
                     </div>
                 </div>
                 <div class="footer-rights">
-                    <p>© 2020, Все права защищены</p>
-                    <p>Сделано в рамках курса учебной платформы <a href="#" class="footer-linc">Annblok</a></p>
+                    <p class="footer-author">© 2020, Все права защищены</p>
+                    <p class="footer-author">Сделано в рамках курса учебной платформы <a href="https://Annblok.ru/" target="_blank">Annblok</a></p>
                 </div>
             </div>
         </div>
@@ -392,22 +391,21 @@ function closeModalMenu() {
    document.getElementById("modal").style.top = "-600px";
 }
 
-// Smooth Scroll
+// Smooth Scroll banner-text
       
-const links = document.querySelectorAll(".arrow");
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
 
-for (const link of links) {
-    link.addEventListener("click", clickHandler);
-}
-
-function clickHandler(e) {
-    e.preventDefault();
-    const href = this.getAttribute("href");
-
-    document.querySelector(href).scrollIntoView({
-        behavior: "smooth"
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     });
-}
+};	
+
 </script>
 </body>
 </html>

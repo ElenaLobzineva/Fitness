@@ -133,6 +133,7 @@ html {
     cursor: pointer;
 }
 .arrow {
+    display: block;
     background-image: url(../images/icons/Arrow.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -173,8 +174,7 @@ html {
 .box-image {
    position: absolute;
    top: 3px;
-   right: -10.3rem;
-
+   right: -11.3rem;
    max-height: 100%;
 
 }
@@ -709,8 +709,8 @@ html {
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 125%;
-
 }
+
 .company-benefits-description {
     font-size: 1.8rem;
     max-width: 25rem;
@@ -843,7 +843,12 @@ html {
     align-items: center;
     gap: 6rem;
 }
-
+.footer-author a {
+    color: #B7BABE;
+}
+.footer-author a:hover {
+    color: rgba(43, 53, 65, 1)
+}
 
 /*----MODAL----*/
 
@@ -1063,7 +1068,8 @@ html {
         font-size: 4.7rem;
     }
     .box {
-        right: -21.5rem;
+        right: -19.5rem;
+        height: 90%;
     }
 }
 @media (max-width: 1250px) {
@@ -1099,7 +1105,10 @@ html {
         grid-column: 2 / 3;
         grid-row: 3 / 4;
     }
-
+    .company-benefits-title {
+        width: 10rem;
+        font-size: 1.5rem;
+    }
     .box {
         right: -12rem;
     }
@@ -1126,6 +1135,7 @@ html {
     }
     .title {
         font-size: 2.7rem;
+        margin-top: 13px;
     }
     .box-event {
         grid-template-rows: 50rem 1fr;
@@ -1450,7 +1460,7 @@ html {
         max-width: 41rem;
     }
     .footer-rights {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 @media (max-width: 550px) {
@@ -1585,8 +1595,8 @@ html {
         }
 
         .footer-rights {
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             font-size: 10px;
         }
         .footer-item {

@@ -946,6 +946,7 @@ html {
 }
 
 .send-button {
+    display: block;
     font-size: 1.6rem;
     text-transform: uppercase;
     background-color: #FBF138;
@@ -1079,32 +1080,59 @@ html {
     }
     .grid-timetable {
        height: 333px;
-     
     }
+
+    /*---------Функциональный тренинг-------*/
     .grid-timetable:nth-child(1) {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
-    .grid-timetable:nth-child(2) {
+
+ /*---------Силовой микс-------*/
+    .grid-timetable:nth-child(4) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
-    .grid-timetable:nth-child(3) {
+    .grid-timetable:nth-child(4) 
+    .grid-timetable-title {
+        margin-top: 0;
+    }
+    .grid-timetable-description {
+        font-size: 12px;
+    }
+ 
+ /*---------Body sculpt-------*/
+    .grid-timetable:nth-child(2) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        max-height: 22.4rem;
     }
-    .grid-timetable:nth-child(4){
+
+ /*---------Дыхательные практики-------*/
+    .grid-timetable:nth-child(5){
         grid-column: 2 / 3;
         grid-row: 2 / 3;
+        max-height: 22.4rem;
     }
-    .grid-timetable:nth-child(5){
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-    }
+
+   /*---------L.A.B.------*/
+.grid-timetable:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    max-height: 22.4rem;
+}
+
+
+  
+   /*--------Комплексная разминка------*/
     .grid-timetable:nth-child(6) {
         grid-column: 2 / 3;
         grid-row: 3 / 4;
+        max-height: 22.4rem;
     }
+
+
+
     .company-benefits-title {
         width: 10rem;
         font-size: 1.5rem;
@@ -1136,6 +1164,9 @@ html {
     .title {
         font-size: 2.7rem;
         margin-top: 13px;
+    }
+    .subtitle {
+        font-size: 2rem;
     }
     .box-event {
         grid-template-rows: 50rem 1fr;
@@ -1186,9 +1217,6 @@ html {
        font-size: 1.4rem;
     
    }
-   .subtitle {
-       font-size: 3rem;
-   }
    .box {
         right: -6rem;
         height: 86%;
@@ -1233,7 +1261,7 @@ html {
     .about-company-text {
         font-size: 1.5rem;
         padding-bottom: 5rem;
-        max-width: 26rem;
+        width: 27rem;
     }
     .about-company-img-gradient {
         background-size: cover;
@@ -1327,9 +1355,6 @@ html {
         padding: 6px 15px;
         left: 0;
         right: auto;
-        font-size: 12px;
-    }
-    .grid-timetable-description{
         font-size: 12px;
     }
     .timetable {
@@ -1458,6 +1483,7 @@ html {
     .desc {
         font-size: 1.6rem;
         max-width: 41rem;
+        margin-right: 24rem;
     }
     .footer-rights {
         font-size: 10px;
@@ -1710,7 +1736,70 @@ html {
     .modal-form > input {
         padding: 10px 0 5px 5px;
     }
-   
+    .grid-timetable {
+        height: 114px;
+    }
+    .grid-timetable:nth-child(1) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(2) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(3) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(4) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(5) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(6) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable-title {
+        margin-top: 0;
+    }
+    .grid-menu {
+        max-height: 14rem;
+        margin-top: 12px;
+    }
+    .grid-timetable-description {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .grid-timetable-title {
+       margin-bottom: 0; 
+    }
+    .grid-timetable:nth-child(4) {
+        min-height: 20.6rem;
+    }
+    .timetable-grid {
+        grid-template-rows: 14rem 24rem 14rem 14rem 14rem 14rem;
+        gap: 10px;
+    }
+    .grid-timetable {
+        min-width: 28rem;
+        padding: 18px 8px 0;
+    }
+    .grid-timetable:nth-child(1) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(2) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(3) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(4) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(5) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(6) img {
+        margin-right: 10px;
+    }
 }
 @media (max-width: 340px) {
     .banner-text {
@@ -1746,7 +1835,9 @@ html {
     }
     .box {
         height: 23rem;
-      
+    }
+    .grid-timetable {
+        min-width: 26rem;
     }
 }
 

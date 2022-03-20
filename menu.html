@@ -73,8 +73,8 @@
         </div>
     </div>
     
-<!--бЛИЖАЙШИЕ СОБЫТИЯ-->
     <main>
+        <!--бЛИЖАЙШИЕ СОБЫТИЯ-->
         <div class="event">
             <div class="container">
                 <div class="events-headers">
@@ -85,27 +85,27 @@
                             <div class="box-event-gradient">    
                                 <p class="event-data">29.06 - 4.07</p>
                                 <p class="event-title">Марафон выносливости</p>
-                                <a href="#modal_maraphon" class="participate">участвовать</a>
+                                <a class="participate" onclick="openModalMarathon()">Учавствовать</a>
                                 <button class="button-participate">марафон</button>
-                                <a href="#modal_maraphon" class="btn-event"></a>
+                                <a href="#win1" class="btn-event" onclick="openModalMarathon()"></a>
                             </div>
                         </div>
                         <div class="event-vebinar-1">
                             <div class="box-event-gradient">
                                 <p class="event-data">9.07</p>
                                 <p class="event-title">Как стать тренером?</p>
-                                <a href="#modal_vebinar_1" class="participate">участвовать</a>
+                                <a href="#win1" class="participate">участвовать</a>
                                 <button class="button-participate">вебинар</button>
-                                <a href="#modal_vebinar_1" class="btn-event"></a>
+                                <a href="#win1" class="btn-event"></a>
                             </div>
                         </div>
                         <div class="event-vebinar-2">
                             <div class="box-event-gradient">
                                 <p class="event-data">15.07</p>
                                 <p class="event-title">Йога, как стиль жизни</p>
-                                <a href="#modal_vebinar_2" class="participate">участвовать</a>
+                                <a href="#win1" class="participate">участвовать</a>
                                 <button class="button-participate">вебинар</button>
-                                <a href="#modal_vebinar_2" class="btn-event"></a>
+                                <a href="#win1" class="btn-event"></a>
                             </div>
                         </div>
                     </div> 
@@ -209,14 +209,19 @@
             <div class="send">
                 <div class="send-input">
                     <input type="email" class="email" placeholder="Ваш e-mail" required>
-                    <input type="checkbox" class="agreement-checkbox">
-                    <label class="checkbox-text">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
+                    <div class="agreement">
+                        <input type="checkbox" id="01" class="checkbox">
+                        <label class="checkbox-text" for="01">Согласен с обработкой <a href="https://annblok.ru/workshop" target="_blank">персональных данных</a></label>
+                     </div>
                 </div>
                 <button type="submit" id="mc-embedded-subscribe" class="send-subscription-btn">Подписаться</button>
             </div>       
         </form>
     </div>
 </div>
+
+
+
 
 <!--О КОМПАНИИ-->
 
@@ -228,7 +233,7 @@
                 <div class="company-text">
                     <h3 class="about-company-title">О компании</h3>
                        <p class="about-company-text">Наша компания является одной из&nbsp;немногих,&nbsp;кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами&nbsp;и&nbsp;вы&nbsp;сами увидите, что&nbsp;мы проводим не&nbsp;только онлайн-тренировки.</p>
-                    <a href="#modal_maraphon" class="about-company-btn">Записаться</a> 
+                    <a href="#event_modal" class="about-company-btn">Записаться</a> 
                     <div class="about-company-img-gradient">          
                     </div>                        
                 </div>
@@ -253,7 +258,7 @@
     <div class="company-mobile">
                      
         </div>
-        <a href="#modal_maraphon" class="about-company-btn-mobile">Записаться</a>
+        <a href="#event_modal" class="about-company-btn-mobile">Записаться</a>
         <div class="company-mobile-img">
         </div>
     </div>
@@ -319,67 +324,35 @@
 <!--MODAL--> 
 
 <div>
-    <div id="modal_maraphon" class="event_modal">
+    <div class="event_modal" id="win1">
         <div class="modal_windows">
             <div class="modal_content">
                 <h3 class="modal-title">Заявка на участие «Марафон&nbsp;выносливости»</h3>
                     <p class="modal-description">
                         Заполните все поля, и мы пришлем информацию в ближайшее время
                     </p>
+                   
                     <form class="modal-form">
                         <input type="email" class="modal-form-email" placeholder="Ваш e-mail" required>
                         <input type="tel" class="modal-form-tel" placeholder="Ваш номер телефона" required>
                         <a href="#" class="send-button">Отправить</a>
                     </form>
-                    <a href="#" class="modal-close"></a>
+                    <a class="modal-close" onclick="closeModalMarathon()"></a>
                 </div>
             </div>
         </div>
     </div>
 
 <div>
-    <div id="modal_vebinar_1" class="event_modal">
-        <div class="modal_windows">
-            <div class="modal_content">
-                <h3 class="modal-title">Заявка&nbsp;на&nbsp;участие «Как&nbsp;стать&nbsp;тренером»</h3>
-                    <p class="modal-description">
-                        Заполните все поля, и мы пришлем информацию в&nbsp;ближайшее время
-                    </p>
-                    <form class="modal-form">
-                        <input type="email" class="modal-form-email" placeholder="Ваш e-mail" required>
-                        <input type="tel" class="modal-form-tel" placeholder="Ваш номер телефона" required>
-                        <a href="#" class="send-button">Отправить</a>
-                    </form>
-                    <a href="#" class="modal-close"></a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-<div>
-    <div id="modal_vebinar_2" class="event_modal">
-        <div class="modal_windows">
-            <div class="modal_content">
-                <h3 class="modal-title">Заявка&nbsp;на&nbsp;участие «Йога,&nbsp;как&nbsp;стиль&nbsp;жизни»</h3>
-                <p class="modal-description">
-                    Заполните все поля, и мы пришлем информацию в ближайшее время
-                </p>
-                <form class="modal-form">
-                    <input type="email" class="modal-form-email" placeholder="Ваш e-mail" required>
-                    <input type="tel" class="modal-form-tel" placeholder="Ваш номер телефона" required>
-                    <a href="#" class="send-button">Отправить</a>
-                </form>
-                <a href="#" class="modal-close"></a>
-            </div>
-        </div>
-    </div>
-</div>
+
                     
         
 <script>
-// Модальное окно
 
- function openModal() {
+// BURGER
+
+function openModal() {
    document.getElementById("modal").style.top = "-20px";
 }
 
@@ -387,7 +360,20 @@ function closeModalMenu() {
    document.getElementById("modal").style.top = "-600px";
 }
 
-// Smooth Scroll banner-text
+
+// MODAL
+
+function openModalMarathon() {
+
+	document.getElementById("win1").style.top = "15%";
+
+}
+function closeModalMarathon() {
+	document.getElementById("win1").style.top = "-700px";
+}
+
+
+// Smooth Scroll 
       
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
@@ -401,6 +387,8 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };	
+
+
 
 </script>
 </body>

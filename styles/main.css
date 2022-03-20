@@ -35,10 +35,12 @@ html {
     display: flex;
     list-style-type: none;
     gap: 5.5rem;
+    
 }
 .header-ul a:hover{
     padding-bottom: .8rem;
     border-bottom: #2B3541 1px solid;
+    transition: 0.1s;
 }
 .social {
     display: flex;
@@ -219,6 +221,8 @@ html {
     border: none;
     padding: 1rem 2rem;
     margin-bottom: 0;
+    font-size: 12px;
+    cursor: pointer;
 }
 .btn-event {
     display: none;
@@ -254,6 +258,7 @@ html {
     display: none;
 }
 .participate {
+    display: inline-block;
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -262,6 +267,7 @@ html {
     padding: 2rem 3.7rem;
     margin-left: 3.7rem;
     opacity: 0;
+    cursor: pointer;
 }
 .participate:hover {
     color: #FBF138;
@@ -402,7 +408,6 @@ html {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 700;
-    margin-bottom: 20px;
     margin-top: 40px;
  }
  .grid-timetable-description {
@@ -416,7 +421,7 @@ html {
 
  }
  .grid-timetable:nth-child(4):hover {
-    border: 1px solid rgba(43, 53, 65, 0.2);
+    border: 1px solid transparent;
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
  }
@@ -545,9 +550,11 @@ html {
     outline: 1px solid #FBF138;
     background: #FFFFFF;
 }
-.email:invalid {
+
+input:invalid {
     outline: 1px solid #AE0303;
 }
+
  .send-input {
     width: 100%;
     margin-right: 7px;
@@ -580,7 +587,6 @@ html {
     background-color: #2B3541;
     color: #FBF138;
  }
-
  .checkbox-text {
     color: #8F949A;
     font-size: 1.1rem;
@@ -594,45 +600,84 @@ html {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
 }
-.agreement-checkbox:checked,
-.agreement-checkbox:not(:checked){
-   position: absolute;
-   left:-9999px;
-}
-.agreement-checkbox:checked + label,
-.agreement-checkbox:not(:checked) + label{
-   position: relative;
-   padding-left: 2.5rem;
-   cursor:pointer;
-}
-.agreement-checkbox:checked + label::before{
-    content:'';
+
+ .checkbox:checked,
+ .checkbox:not(:checked){
     position: absolute;
-    width: 2rem;
-    height: 2rem;
-    left: 0px;
-    top:calc(50% - 10px);
-    background-image: url("../images/icons/check_box.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    left:-9999px;
  }
- .agreement-checkbox:not(:checked) + label::before{
-    content:'';
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    left: 0px;
-    top:calc(50% - 10px);
-    background-image: url("../images/icons/check\ box\ empty.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  
+ .checkbox:checked + label,
+ .checkbox:not(:checked) + label{
+    position: relative;
+    padding-left: 2.5rem;
+    cursor:pointer;
  }
 
+ /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
+ .checkbox:checked + label::before{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left:0;
+    top:calc(50% - 10px);
+    background-color: #2B3541;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+ }
+ /* Стили для псевдоэлемента after с изображением, когда пункт активен */
+ .checkbox:checked + label::after{
+    content:'';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/check_box.svg);
+ }
+ /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт НЕ активен */
+ .checkbox:not(:checked) + label::before{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left:0;
+    top:calc(50% - 10px);
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+ }
+ /* Стили для псевдоэлемента after с изображением, когда пункт НЕ активен */
+ .checkbox:not(:checked) + label::after{
+    content:'';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: all .2s ease;
+    opacity: 0;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-position: 0 -12px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/icons/check_box_empty.svg);
+ }
  .radio:checked + label::before{
     border-radius: 100%;
  }
+ 
+
+
+
+
+
+
+
 
  /*-------about-company-------*/
 
@@ -854,19 +899,19 @@ html {
 
 
 .event_modal {
+
     position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+    background-color: rgba(43, 53, 63, .5);
+    z-index: 555;
     opacity: 0;
     visibility: hidden;
-    overflow-x: auto;
-    overflow-y: hidden;
-    transition: all .8s ease 0s;
+
 }
+
 .event_modal:target {
     opacity: 1;
     visibility: visible;
@@ -881,9 +926,10 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: all .5s ease 0s;
   }
+
   .modal_content {
+    display: inline-block;
     width: 60rem;
     background: #F3F3F3;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -892,6 +938,7 @@ html {
     margin: 0 auto;
     margin-bottom: 4rem;
   }
+
   .modal-close {
     width: 22px;
     height: 22px;
@@ -904,7 +951,10 @@ html {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    z-index: 999;
   }
+
+
   .modal-title {
     width: 100%;
     font-weight: 700;
@@ -1355,7 +1405,7 @@ html {
         padding: 6px 15px;
         left: 0;
         right: auto;
-        font-size: 12px;
+      
     }
     .timetable {
         margin-top: 4.5rem;
@@ -1679,6 +1729,11 @@ html {
         .about-company-item {
             margin-top: 0rem;
         }
+        .desc {
+       
+            margin-right: 0;
+        }
+
 
 }
 
@@ -1838,6 +1893,15 @@ html {
     }
     .grid-timetable {
         min-width: 26rem;
+    }
+    .checkbox-text {
+        font-size: 8px;
+    }
+    .checkbox-text a {
+        font-size: 8px;
+    }
+    .agreement {
+       justify-content: center;
     }
 }
 

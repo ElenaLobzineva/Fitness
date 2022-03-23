@@ -33,7 +33,7 @@
                 <div class="header-logo">
                     <a href="#" class="header-logo-img"></a>
                 </div>
-                <button class="header-burger" onclick="openModal()"></button>
+                <button class="header-burger" onclick="openModal('modalburger')"></button>
                     <nav class="header-nav">
                         <ul class="header-ul">
                             <li><a href="#upcoming-events">Мероприятия</a></li>
@@ -87,16 +87,16 @@
                             <div class="box-event-gradient">    
                                 <p class="event-data">29.06 - 4.07</p>
                                 <p class="event-title">Марафон выносливости</p>
-                                <button class="participate" onclick="openModal('form')">Участвовать</button>
+                                <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">марафон</button>
-                                <button class="btn-event" onclick="openModal('form')"></button>
+                                <button class="btn-event" onclick="openModal('modalpopap')"></button>
                             </div>
                         </div>
                         <div class="event-vebinar-1">
                             <div class="box-event-gradient">
                                 <p class="event-data">9.07</p>
                                 <p class="event-title">Как стать тренером?</p>
-                                <a href="#modal_vebinar_1" class="participate">участвовать</a>
+                                <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">вебинар</button>
                                 <a href="#modal_vebinar_1" class="btn-event"></a>
                             </div>
@@ -105,7 +105,7 @@
                             <div class="box-event-gradient">
                                 <p class="event-data">15.07</p>
                                 <p class="event-title">Йога, как стиль жизни</p>
-                                <a href="#modal_vebinar_2" class="participate">участвовать</a>
+                                <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">вебинар</button>
                                 <a href="#modal_vebinar_2" class="btn-event"></a>
                             </div>
@@ -212,8 +212,10 @@
             <div class="send">
                 <div class="send-input">
                     <input type="email" class="email" placeholder="Ваш e-mail" required>
-                    <input type="checkbox" class="agreement-checkbox">
-                    <label for="01" class="checkbox-text">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
+                    <div class="agreement">
+                        <input type="checkbox" id="01" class="checkbox">
+                        <label class="checkbox-text" for="01">Согласен с обработкой <a href="https://annblok.ru/workshop" target="_blank">персональных данных</a></label>
+                     </div>
                 </div>
                 <button type="submit" id="mc-embedded-subscribe" class="send-subscription-btn">Подписаться</button>
             </div>       
@@ -231,7 +233,7 @@
                 <div class="company-text">
                     <h3 class="about-company-title">О компании</h3>
                        <p class="about-company-text">Наша компания является одной из&nbsp;немногих,&nbsp;кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами&nbsp;и&nbsp;вы&nbsp;сами увидите, что&nbsp;мы проводим не&nbsp;только онлайн-тренировки.</p>
-                    <a href="#modal_maraphon" class="about-company-btn">Записаться</a> 
+                    <button class="about-company-btn" onclick="openModal('modalpopap')">Записаться</button>
                     <div class="about-company-img-gradient">          
                     </div>                        
                 </div>
@@ -256,7 +258,7 @@
     <div class="company-mobile">
                      
         </div>
-        <a href="#modal_maraphon" class="about-company-btn-mobile">Записаться</a>
+        <button class="about-company-btn-mobile" onclick="openModal('modalpopap')">Записаться</button>
         <div class="company-mobile-img">
         </div>
     </div>
@@ -320,19 +322,19 @@
 </div>
 
 
-<!----MODAL----> 
+<!--MODAL--> 
 
 <div class="blackout">
-    <div id="event_modal" class="event_modal">
-        <div class="modal_windows">
-            <div class="modal_content">
+    <div id="event_modal" class="event_modal">      
+        <div class="modal_windows">                 
+            <div class="modal_content">           
                 <h3 class="modal-title">Заявка на участие «Марафон&nbsp;выносливости»</h3>
                     <p class="modal-description">
                         Заполните все поля, и мы пришлем информацию в ближайшее время
                     </p>
-                    <form action="#" class="modal-form">
-                        <input type="email" class="modal-form-email" placeholder="Ваш e-mail" required>
-                        <input type="tel" class="modal-form-tel" placeholder="Ваш номер телефона" required>
+                    <form class="popup-form">
+                        <input type="email" class="popup-form-email" placeholder="Ваш e-mail" required>
+                        <input type="tel" class="popup-form-tel" placeholder="Ваш номер телефона" required>
                         <button class="send-button">Отправить</button>
                     </form>
                     <button class="modal-close" onclick="closeModal()"></button>
@@ -342,8 +344,7 @@
     </div>
 
 
-
-                    
+                
         
 <script>
 // Модальное окно

@@ -214,6 +214,7 @@ html {
 }
 .button-participate {
     position: absolute;
+    border: none;
     right:    0;
     bottom:   0;
     background-color:rgba(251, 241, 56, 1);
@@ -263,6 +264,7 @@ html {
     padding: 2rem 3.7rem;
     margin-left: 3.7rem;
     opacity: 0;
+    border: none;
 }
 .participate:hover {
     color: #FBF138;
@@ -403,7 +405,7 @@ html {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 700;
-    margin-bottom: 20px;
+   
     margin-top: 40px;
  }
  .grid-timetable-description {
@@ -595,42 +597,72 @@ html {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
 }
-.agreement-checkbox:checked,
-.agreement-checkbox:not(:checked){
-   position: absolute;
-   left:-9999px;
-}
-.agreement-checkbox:checked + label,
-.agreement-checkbox:not(:checked) + label{
-   position: relative;
-   padding-left: 2.5rem;
-   cursor:pointer;
-}
-.agreement-checkbox:checked + label::before{
-    content:'';
+.checkbox:checked,
+ .checkbox:not(:checked){
     position: absolute;
-    width: 2rem;
-    height: 2rem;
-    left: 0px;
-    top:calc(50% - 10px);
-    background-image: url("../images/icons/check_box.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    left:-9999px;
  }
- .agreement-checkbox:not(:checked) + label::before{
-    content:'';
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    left: 0px;
-    top:calc(50% - 10px);
-    background-image: url("../images/icons/check_box_empty.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  
+ .checkbox:checked + label,
+ .checkbox:not(:checked) + label{
+    position: relative;
+    padding-left: 2.5rem;
+    cursor:pointer;
  }
 
+ /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
+ .checkbox:checked + label::before{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left:0;
+    top:calc(50% - 10px);
+    background-color: #2B3541;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+ }
+ /* Стили для псевдоэлемента after с изображением, когда пункт активен */
+ .checkbox:checked + label::after{
+    content:'';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/check_box.svg);
+ }
+ /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт НЕ активен */
+ .checkbox:not(:checked) + label::before{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left:0;
+    top:calc(50% - 10px);
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+ }
+ /* Стили для псевдоэлемента after с изображением, когда пункт НЕ активен */
+ .checkbox:not(:checked) + label::after{
+    content:'';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: all .2s ease;
+    opacity: 0;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-position: 0 -12px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/icons/check_box_empty.svg);
+ }
  .radio:checked + label::before{
     border-radius: 100%;
  }
@@ -859,54 +891,34 @@ html {
     z-index: 4;
     display: none;
  }
- .js-modal .blackout {
+ .js-modal-modalpopap .blackout {
     display: block;
  }
- .js-modal-form #event_modal {
+ 
+#event_modal {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    max-width: 600px;
+   background: #F3F3F3;
+   position: absolute;
+   z-index: 5;
+}
+
+ .js-modal-modalpopap #event_modal {
     top: 20px;
     left: 50%;
     transform: translate(-50%);
     opacity: 1;
  }
-
-.event_modal {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    overflow-x: auto;
-    overflow-y: hidden;
-    transition: all .8s ease 0s;
-}
-.event_modal:target {
-    opacity: 1;
-    visibility: visible;
-  }
-  .event_modal:target .modal_content {
-    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-    opacity: 1;
-  }
   .modal_windows {
     display: flex;
-    min-height: 100%;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    transition: all .5s ease 0s;
+    padding: 60px 50px 82px;
+ 
   }
   .modal_content {
-    width: 60rem;
-    background: #F3F3F3;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 77%;
     text-align: center;
-    padding: 6rem;
     margin: 0 auto;
-    margin-bottom: 4rem;
   }
   .modal-close {
     width: 22px;
@@ -932,7 +944,7 @@ html {
 }
 .modal-title::before {
     top: 3.5rem;
-    left: 19.5rem;
+    left: 13.5rem;
     position: absolute;
     content: '';
     background-color: #fbf138;
@@ -947,7 +959,7 @@ html {
     margin: 0 auto;
     margin-bottom: 4rem;
 }
-.modal-form > input {
+.popup-form > input {
     display: block;
     outline: none;
     border: none;
@@ -956,7 +968,7 @@ html {
     width: 90%;
     font-size: 1.8rem;
 }
-.modal-form  input[type="email"] {
+.popup-form input[type="email"] {
     margin-bottom: 2rem;
     font-size: 1.8rem;
 }
@@ -1084,7 +1096,8 @@ html {
         font-size: 4.7rem;
     }
     .box {
-        right: -21.5rem;
+        right: -19.5rem;
+        height: 90%;
     }
 }
 @media (max-width: 1250px) {
@@ -1142,9 +1155,6 @@ html {
         grid-row: 3 / 4;
         max-height: 22.4rem;
     }
-
-
-
     .box {
         right: -12rem;
     }
@@ -1157,6 +1167,10 @@ html {
     }
     .about-company-img-gradient {
         width: 48%;
+    }
+    .modal-title::before {
+        left: 10.5rem;
+     
     }
 }
 @media (max-width: 1000px) {
@@ -1171,6 +1185,7 @@ html {
     }
     .title {
         font-size: 2.7rem;
+        margin-top: 13px;
     }
     .box-event {
         grid-template-rows: 50rem 1fr;
@@ -1268,7 +1283,7 @@ html {
     .about-company-text {
         font-size: 1.5rem;
         padding-bottom: 5rem;
-        max-width: 26rem;
+        max-width: 27rem;
     }
     .about-company-img-gradient {
         background-size: cover;
@@ -1433,9 +1448,9 @@ html {
         right: 10rem;
     }
     .modal-title::before {
-        left: 12.5rem;
+        left: 11.5rem;
         padding: 1.5rem;
-        top: 3.7rem;
+        top: 4rem;
     }
     .footer-social {
         gap: 1.2rem;
@@ -1667,7 +1682,7 @@ html {
             padding: 2rem 4.5rem;
         }
         .modal-title::before {
-            left: 6.7rem;
+            left: 6rem;
             padding: 1.2rem;
             top: 4.4rem;
         }
@@ -1678,11 +1693,11 @@ html {
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
-        .modal-form > input {
+        .popup-form > input {
             padding: 10px 0 5px 5px;
             font-size: 1.2rem;
         }
-        .modal-form input[type="email"] {
+        .popup-form input[type="email"] {
             font-size: 1.2em;
         }
         .box {
@@ -1748,9 +1763,69 @@ html {
     .modal-form > input {
         padding: 10px 0 5px 5px;
     }
+    .grid-timetable {
+        height: 114px;
+    }
+    .grid-timetable:nth-child(1) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(2) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(3) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(4) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(5) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable:nth-child(6) img {
+        margin-bottom: 90px;
+    }
+    .grid-timetable-title {
+        margin-top: 0;
+    }
+    .grid-menu {
+        max-height: 14rem;
+        margin-top: 12px;
+    }
+    .grid-timetable-description {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .grid-timetable-title {
+       margin-bottom: 0; 
+    }
+    .grid-timetable:nth-child(4) {
+        min-height: 20.6rem;
+    }
     .timetable-grid {
-    
-        gap: 68px;
+        grid-template-rows: 14rem 24rem 14rem 14rem 14rem 14rem;
+        gap: 10px;
+    }
+    .grid-timetable {
+        min-width: 28rem;
+        padding: 18px 8px 0;
+    }
+    .grid-timetable:nth-child(1) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(2) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(3) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(4) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(5) img {
+        margin-right: 10px;
+    }
+    .grid-timetable:nth-child(6) img {
+        margin-right: 10px;
     }
 }
 @media (max-width: 340px) {
@@ -1787,6 +1862,17 @@ html {
     }
     .box {
         height: 23rem;
-      
+    }
+    .grid-timetable {
+        min-width: 26rem;
+    }
+    .checkbox-text {
+        font-size: 8px;
+    }
+    .checkbox-text a {
+        font-size: 8px;
+    }
+    .agreement {
+       justify-content: center;
     }
 }

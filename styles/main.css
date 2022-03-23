@@ -35,12 +35,10 @@ html {
     display: flex;
     list-style-type: none;
     gap: 5.5rem;
-    
 }
 .header-ul a:hover{
     padding-bottom: .8rem;
     border-bottom: #2B3541 1px solid;
-    transition: 0.1s;
 }
 .social {
     display: flex;
@@ -176,7 +174,8 @@ html {
 .box-image {
    position: absolute;
    top: 3px;
-   right: -11.3rem;
+   right: -10.3rem;
+
    max-height: 100%;
 
 }
@@ -221,8 +220,6 @@ html {
     border: none;
     padding: 1rem 2rem;
     margin-bottom: 0;
-    font-size: 12px;
-    cursor: pointer;
 }
 .btn-event {
     display: none;
@@ -258,7 +255,6 @@ html {
     display: none;
 }
 .participate {
-    display: inline-block;
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -267,7 +263,6 @@ html {
     padding: 2rem 3.7rem;
     margin-left: 3.7rem;
     opacity: 0;
-    cursor: pointer;
 }
 .participate:hover {
     color: #FBF138;
@@ -408,6 +403,7 @@ html {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 700;
+    margin-bottom: 20px;
     margin-top: 40px;
  }
  .grid-timetable-description {
@@ -421,7 +417,7 @@ html {
 
  }
  .grid-timetable:nth-child(4):hover {
-    border: 1px solid transparent;
+    border: 1px solid rgba(43, 53, 65, 0.2);
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
  }
@@ -550,11 +546,9 @@ html {
     outline: 1px solid #FBF138;
     background: #FFFFFF;
 }
-
-input:invalid {
+.email:invalid {
     outline: 1px solid #AE0303;
 }
-
  .send-input {
     width: 100%;
     margin-right: 7px;
@@ -587,6 +581,7 @@ input:invalid {
     background-color: #2B3541;
     color: #FBF138;
  }
+
  .checkbox-text {
     color: #8F949A;
     font-size: 1.1rem;
@@ -600,84 +595,45 @@ input:invalid {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
 }
-
- .checkbox:checked,
- .checkbox:not(:checked){
-    position: absolute;
-    left:-9999px;
- }
- .checkbox:checked + label,
- .checkbox:not(:checked) + label{
-    position: relative;
-    padding-left: 2.5rem;
-    cursor:pointer;
- }
-
- /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
- .checkbox:checked + label::before{
+.agreement-checkbox:checked,
+.agreement-checkbox:not(:checked){
+   position: absolute;
+   left:-9999px;
+}
+.agreement-checkbox:checked + label,
+.agreement-checkbox:not(:checked) + label{
+   position: relative;
+   padding-left: 2.5rem;
+   cursor:pointer;
+}
+.agreement-checkbox:checked + label::before{
     content:'';
     position: absolute;
-    width: 16px;
-    height: 16px;
-    left:0;
+    width: 2rem;
+    height: 2rem;
+    left: 0px;
     top:calc(50% - 10px);
-    background-color: #2B3541;
-    border-radius: 2px;
-    border: 2px solid #2B3541;
- }
- /* Стили для псевдоэлемента after с изображением, когда пункт активен */
- .checkbox:checked + label::after{
-    content:'';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    transition: all .2s ease;
-    opacity: 1;
-    left: 4px;
-    top: calc(50% - 6px);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../images/icons/check_box.svg);
- }
- /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт НЕ активен */
- .checkbox:not(:checked) + label::before{
-    content:'';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    left:0;
-    top:calc(50% - 10px);
-    background-color: transparent;
-    border-radius: 2px;
-    border: 2px solid #2B3541;
- }
- /* Стили для псевдоэлемента after с изображением, когда пункт НЕ активен */
- .checkbox:not(:checked) + label::after{
-    content:'';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    transition: all .2s ease;
-    opacity: 0;
-    left: 4px;
-    top: calc(50% - 6px);
-    background-position: 0 -12px;
-    background-color: transparent;
+    background-image: url("../images/icons/check_box.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/icons/check_box_empty.svg);
+    background-position: center;
  }
+ .agreement-checkbox:not(:checked) + label::before{
+    content:'';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 0px;
+    top:calc(50% - 10px);
+    background-image: url("../images/icons/check_box_empty.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+ }
+
  .radio:checked + label::before{
     border-radius: 100%;
  }
- 
-
-
-
-
-
-
-
 
  /*-------about-company-------*/
 
@@ -754,8 +710,8 @@ input:invalid {
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 125%;
-}
 
+}
 .company-benefits-description {
     font-size: 1.8rem;
     max-width: 25rem;
@@ -888,30 +844,45 @@ input:invalid {
     align-items: center;
     gap: 6rem;
 }
-.footer-author a {
-    color: #B7BABE;
-}
-.footer-author a:hover {
-    color: rgba(43, 53, 65, 1)
-}
+
 
 /*----MODAL----*/
 
+ .blackout {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: none;
+ }
+ .js-modal .blackout {
+    display: block;
+ }
+ .js-modal-form #event_modal {
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 1;
+ }
 
 .event_modal {
-
     position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(43, 53, 63, .5);
-    z-index: 555;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
-
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: all .8s ease 0s;
 }
-
 .event_modal:target {
     opacity: 1;
     visibility: visible;
@@ -926,10 +897,9 @@ input:invalid {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: all .5s ease 0s;
   }
-
   .modal_content {
-    display: inline-block;
     width: 60rem;
     background: #F3F3F3;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -938,7 +908,6 @@ input:invalid {
     margin: 0 auto;
     margin-bottom: 4rem;
   }
-
   .modal-close {
     width: 22px;
     height: 22px;
@@ -951,10 +920,7 @@ input:invalid {
     position: absolute;
     top: 2rem;
     right: 2rem;
-    z-index: 999;
   }
-
-
   .modal-title {
     width: 100%;
     font-weight: 700;
@@ -996,7 +962,6 @@ input:invalid {
 }
 
 .send-button {
-    display: block;
     font-size: 1.6rem;
     text-transform: uppercase;
     background-color: #FBF138;
@@ -1119,8 +1084,7 @@ input:invalid {
         font-size: 4.7rem;
     }
     .box {
-        right: -19.5rem;
-        height: 90%;
+        right: -21.5rem;
     }
 }
 @media (max-width: 1250px) {
@@ -1130,8 +1094,8 @@ input:invalid {
     }
     .grid-timetable {
        height: 333px;
+     
     }
-
     /*---------Функциональный тренинг-------*/
     .grid-timetable:nth-child(1) {
         grid-column: 1 / 2;
@@ -1171,8 +1135,6 @@ input:invalid {
     grid-row: 3 / 4;
     max-height: 22.4rem;
 }
-
-
   
    /*--------Комплексная разминка------*/
     .grid-timetable:nth-child(6) {
@@ -1183,10 +1145,6 @@ input:invalid {
 
 
 
-    .company-benefits-title {
-        width: 10rem;
-        font-size: 1.5rem;
-    }
     .box {
         right: -12rem;
     }
@@ -1213,10 +1171,6 @@ input:invalid {
     }
     .title {
         font-size: 2.7rem;
-        margin-top: 13px;
-    }
-    .subtitle {
-        font-size: 2rem;
     }
     .box-event {
         grid-template-rows: 50rem 1fr;
@@ -1267,6 +1221,9 @@ input:invalid {
        font-size: 1.4rem;
     
    }
+   .subtitle {
+       font-size: 3rem;
+   }
    .box {
         right: -6rem;
         height: 86%;
@@ -1311,7 +1268,7 @@ input:invalid {
     .about-company-text {
         font-size: 1.5rem;
         padding-bottom: 5rem;
-        width: 27rem;
+        max-width: 26rem;
     }
     .about-company-img-gradient {
         background-size: cover;
@@ -1405,7 +1362,10 @@ input:invalid {
         padding: 6px 15px;
         left: 0;
         right: auto;
-      
+        font-size: 12px;
+    }
+    .grid-timetable-description{
+        font-size: 12px;
     }
     .timetable {
         margin-top: 4.5rem;
@@ -1533,10 +1493,12 @@ input:invalid {
     .desc {
         font-size: 1.6rem;
         max-width: 41rem;
-        margin-right: 24rem;
     }
     .footer-rights {
-        font-size: 10px;
+        font-size: 12px;
+    }
+    .grid-timetable-title {
+        margin-top: 24px;
     }
 }
 @media (max-width: 550px) {
@@ -1671,8 +1633,8 @@ input:invalid {
         }
 
         .footer-rights {
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             font-size: 10px;
         }
         .footer-item {
@@ -1729,11 +1691,6 @@ input:invalid {
         .about-company-item {
             margin-top: 0rem;
         }
-        .desc {
-       
-            margin-right: 0;
-        }
-
 
 }
 
@@ -1791,69 +1748,9 @@ input:invalid {
     .modal-form > input {
         padding: 10px 0 5px 5px;
     }
-    .grid-timetable {
-        height: 114px;
-    }
-    .grid-timetable:nth-child(1) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(2) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(3) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(4) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(5) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(6) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable-title {
-        margin-top: 0;
-    }
-    .grid-menu {
-        max-height: 14rem;
-        margin-top: 12px;
-    }
-    .grid-timetable-description {
-        margin-bottom: 0;
-        margin-top: 10px;
-    }
-    .grid-timetable-title {
-       margin-bottom: 0; 
-    }
-    .grid-timetable:nth-child(4) {
-        min-height: 20.6rem;
-    }
     .timetable-grid {
-        grid-template-rows: 14rem 24rem 14rem 14rem 14rem 14rem;
-        gap: 10px;
-    }
-    .grid-timetable {
-        min-width: 28rem;
-        padding: 18px 8px 0;
-    }
-    .grid-timetable:nth-child(1) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(2) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(3) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(4) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(5) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(6) img {
-        margin-right: 10px;
+    
+        gap: 68px;
     }
 }
 @media (max-width: 340px) {
@@ -1890,18 +1787,6 @@ input:invalid {
     }
     .box {
         height: 23rem;
-    }
-    .grid-timetable {
-        min-width: 26rem;
-    }
-    .checkbox-text {
-        font-size: 8px;
-    }
-    .checkbox-text a {
-        font-size: 8px;
-    }
-    .agreement {
-       justify-content: center;
+      
     }
 }
-

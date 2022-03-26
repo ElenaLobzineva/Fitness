@@ -54,7 +54,7 @@ html {
     background-size: cover;
     width: 2.6rem;
     height: 2.6rem;
-    transition: 0.3s;
+    transition: all .3s ease;
     transform: scale(1);
     opacity: 0.8;
 }
@@ -69,7 +69,7 @@ html {
     background-size: cover;
     width: 2.6rem;
     height: 2.6rem;
-    transition: 0.3s;
+    transition: all .3s ease;
     opacity: 0.8;
 }
 .social-fb:hover {
@@ -124,7 +124,7 @@ html {
     width: 25.2rem;
     padding: 2rem 3.5rem;
     text-align: center;
-    transition: 0.3s;
+    transition: all .3s ease;
     box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
 }
 .banner-text:hover {
@@ -221,6 +221,7 @@ html {
     border: none;
     padding: 1rem 2rem;
     margin-bottom: 0;
+    font-size: 18px;
 }
 .btn-event {
     display: none;
@@ -239,7 +240,7 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: .2s;
+    transition: all .3s ease;
     left: 0;
     top: 0;
     box-sizing: border-box;
@@ -279,7 +280,7 @@ html {
     width: 100%;
     height: 100%;
     grid-area: a;
-    transition: 0.2s;
+    transition: all .3s ease;
     position: relative;
 }
 .event-vebinar-1 {
@@ -291,7 +292,7 @@ html {
     width: 100%;
     height: 100%;
     grid-area: b;
-    transition: 0.2s;
+    transition: all .3s ease;
     position: relative;
 }
 .event-vebinar-2 {
@@ -303,7 +304,7 @@ html {
     width: 100%;
     height: 100%;
     grid-area: c;
-    transition: 0.2s;
+    transition: all .3s ease;
     position: relative;
 }
 .events-headers h3 {
@@ -317,7 +318,7 @@ html {
 .timetable-title {
     font-size: 4rem;
     font-weight: 700;
-    max-width: 50%;
+    max-width: 49%;
     line-height: 125%;
     color: #2B3541;
 }
@@ -364,7 +365,7 @@ html {
     width: 5.8rem;
 }
 .img-grid {
-    transition: 0.3s;
+    transition: all .3s ease;
 }
 .grid-timetable:nth-child(1) {
     grid-column: 1 / 2;
@@ -384,7 +385,7 @@ html {
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
     opacity: 0.7;
     box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);
-    border: none;
+    border: transparent;
  }
  .grid-timetable:nth-child(5) {
     grid-column: 2 / 3;
@@ -405,7 +406,7 @@ html {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 700;
-   
+   margin-bottom: 0;
     margin-top: 40px;
  }
  .grid-timetable-description {
@@ -413,7 +414,7 @@ html {
     font-size: 18px;
     overflow: hidden;
     margin-top: 0;
-    margin-bottom: 40px;
+
     max-height: 0;
     transition: all .2s linear;
 
@@ -453,7 +454,7 @@ html {
     border: 1px solid rgba(43, 53, 65, 0.2);
     background: rgba(243, 243, 243, .5);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
-    transition: 0.3s;
+    transition: all .3s ease;
  }
  
  .grid-timetable:nth-child(1)
@@ -466,32 +467,32 @@ html {
  .grid-timetable:hover
  .grid-timetable-title {
     margin-top: 1rem;
-     transition: 0.5s;
+    transition: all .3s ease;
  }
  .grid-timetable:nth-child(3)
  .grid-timetable:hover
  .grid-timetable-title {
     margin-top: 1rem;
-     transition: 0.5s;
+    transition: all .3s ease;
  }
  .grid-timetable:nth-child(5)
  .grid-timetable:hover
  .grid-timetable-title {
     margin-top: 1rem;
-     transition: 0.5s;
+    transition: all .3s ease;
  }
  .grid-timetable:nth-child(6)
  .grid-timetable:hover
  .grid-timetable-title {
     margin-top: 1rem;
-     transition: 0.5s;
+    transition: all .3s ease;
  }
 
 
 
  .grid-timetable:hover
  .img-grid {
-     transition: 0.3s;
+    transition: all .3s ease;
  }
  .workout-schedule {
      margin: 0;
@@ -544,10 +545,12 @@ html {
     box-sizing: border-box;
     border: 1px solid transparent;
  }
- .email:focus {
-    outline: 1px solid #FBF138;
+
+ .email:not(:focus):invalid {
+    outline: 1px solid #FFFFFF;
     background: #FFFFFF;
 }
+
 .email:invalid {
     outline: 1px solid #AE0303;
 }
@@ -563,7 +566,7 @@ html {
  .form-send-subscription {
     position: relative;
     max-width: 64.6rem;
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 11.4rem;
     margin: 0 auto;
 }
@@ -627,7 +630,7 @@ html {
     position: absolute;
     width: 12px;
     height: 12px;
-    transition: all .2s ease;
+    transition: all .3s ease;
     opacity: 1;
     left: 4px;
     top: calc(50% - 6px);
@@ -653,7 +656,7 @@ html {
     position: absolute;
     width: 24px;
     height: 24px;
-    transition: all .2s ease;
+    transition: all .3s ease;
     opacity: 0;
     left: 4px;
     top: calc(50% - 6px);
@@ -680,7 +683,7 @@ html {
 }
 .container-content {
     position: relative;
-    margin-bottom: 11rem;
+    margin-bottom: 15rem;
 }
 .container-content img {
     position: absolute;
@@ -706,6 +709,7 @@ html {
 .about-company-title {
     font-size: 4rem;
     font-weight: 700;
+    margin-bottom: 0;
 }
 .about-company-text {
     font-size: 1.8rem;
@@ -732,21 +736,20 @@ html {
     color: #FBF138;
 }
 .about-company-item {
-    display: flex;
-    gap: 3%;
-    margin-top: 12rem;
-    padding-left: 0;
-    flex-wrap: nowrap;
+    display: grid;
+    column-gap: 26px;
+    margin-top: 10rem;
+    grid-template-columns: repeat(4, 1fr);
 }
 .company-benefits-title {
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 125%;
-
 }
+
+
 .company-benefits-description {
     font-size: 1.8rem;
-    max-width: 25rem;
     opacity: 0.6;
     line-height: 150%;
 }
@@ -763,15 +766,13 @@ html {
 } 
 .footer-item {
     display: flex;
-    gap: 7rem;
+    gap: 10rem;
     justify-content: space-between;
-    width: 100%;
 }
 
 .footer-cover {
     display: flex;
-    align-items: center;
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
     justify-content: space-between;
 }
 
@@ -807,7 +808,7 @@ html {
     background-size: cover;
     width: 2.6rem;
     height: 2.6rem;
-    transition: 0.3s;
+    transition: all .3s ease;
     transform: scale(1);
     opacity: 0.8;
 }
@@ -822,7 +823,7 @@ html {
     background-size: cover;
     width: 2.6rem;
     height: 2.6rem;
-    transition: 0.3s;
+    transition: all .3s ease;
     opacity: 0.8;
 }
 .footer-social-fb:hover {
@@ -854,7 +855,6 @@ html {
     line-height: 150%;
     position: relative;
     z-index: 1;
-    margin-top: 1.1rem;
     text-decoration: none;
     color: #2B3541;
     left: 2rem;
@@ -916,7 +916,6 @@ html {
  
   }
   .modal_content {
-    width: 77%;
     text-align: center;
     margin: 0 auto;
   }
@@ -934,23 +933,26 @@ html {
     right: 2rem;
   }
   .modal-title {
-    width: 100%;
     font-weight: 700;
-    font-size: 2.8rem;
-    margin: 0 auto;
-    margin-bottom: 4rem;
-
-    
+    font-size: 28px;
+    line-height: 125%;
+    margin: 0;
+    display: inline;
+    position: relative;
+    z-index: 1;
 }
+
+
 .modal-title::before {
-    top: 3.5rem;
-    left: 13.5rem;
-    position: absolute;
     content: '';
-    background-color: #fbf138;
+    width: 53px;
+    height: 53px;
+    border-radius: 100%;
+    background: #FBF138;
     box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
-    padding: 2rem;
-    border-radius: 3rem;
+    position: absolute;
+    left: -40px;
+    top: -32px;
     z-index: -1;
 }
 .modal-description {
@@ -1038,7 +1040,7 @@ html {
     text-align: center;
     position: absolute;
     margin: auto 0;
-    transition: 0.3s;
+    transition: all .3s ease;
     box-sizing: border-box;
     z-index: 5;
  }
@@ -1133,8 +1135,8 @@ html {
     }
     .grid-timetable {
        height: 333px;
-     
     }
+    
     /*---------Функциональный тренинг-------*/
     .grid-timetable:nth-child(1) {
         grid-column: 1 / 2;
@@ -1194,10 +1196,21 @@ html {
     .about-company-img-gradient {
         width: 48%;
     }
-    .modal-title::before {
-        left: 10.5rem;
-     
+
+
+}
+@media (max-width: 1115px) {
+    .about-company-item {
+        grid-template-columns: repeat(2, 2fr);      
     }
+    .company-benefits-title {
+        font-size: 16px;
+    }
+    .company-benefits-description {
+        font-size: 16px;
+        width: fit-content;
+    }
+
 }
 @media (max-width: 1000px) {
     .text-right {
@@ -1229,6 +1242,7 @@ html {
     .box-image {
         max-width: 143%;
     }
+ 
 }
 @media (max-width: 950px) {
 
@@ -1316,13 +1330,6 @@ html {
         max-width: 35rem;
         max-height: 23rem;
     }
-    .about-company-item {
-        flex-wrap: wrap;
-        margin-top: 5rem;
-        justify-content: normal;
-        gap: 12%;
-       
-    }
     .text {
         margin-top: 4.4rem;
     }
@@ -1389,9 +1396,7 @@ html {
     font-size: 1.6rem;
     max-width: 18rem;
     }
-    .company-benefits-title {
-        font-size: 1.6rem;
-    }
+
     .participate {
         display: none;
     }
@@ -1456,10 +1461,10 @@ html {
         margin-top: 2.5rem; 
     }
     .footer-ul {
-        gap: 1.5rem;
+        gap: 4rem;
     }
     .footer-ul a {
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .site {
         font-size: 1.2rem;
@@ -1473,11 +1478,6 @@ html {
     .site::before {
         right: 10rem;
     }
-    .modal-title::before {
-        left: 11.5rem;
-        padding: 1.5rem;
-        top: 4rem;
-    }
     .footer-social {
         gap: 1.2rem;
     }
@@ -1486,6 +1486,15 @@ html {
     }
     .modal-title {
         font-size: 1.8rem;
+    }
+    .modal-title::before {
+        width: 35px;
+        height: 35px;
+        left: -27px;
+        top: -25px;
+    }
+    .footer-item {
+        gap: 2rem;
     }
 }
 @media (max-width: 750px) { 
@@ -1583,6 +1592,8 @@ html {
     }
     .grid-menu {
         display: flex;
+        overflow: hidden;
+        transition: all .3s ease;
       
     }
     .grid-timetable:nth-child(1) img {
@@ -1618,6 +1629,7 @@ html {
     .grid-menu-text{
         display: flex;
         flex-direction: column;
+
     }
     .grid-timetable-title {
         margin-bottom: 1.5rem;
@@ -1638,7 +1650,7 @@ html {
         display: none;
     }
     .about-company-btn-mobile {
-        padding: 20px;
+        padding: 20px 40px;
         border: none;
         cursor: pointer;
         display: block;
@@ -1659,6 +1671,11 @@ html {
             background-position: center;
             background-size: cover;
             margin-top: 20px;
+        }
+
+        .company-mobile-flex {
+            display: flex;
+            flex-direction: column;
         }
         .events-headers {
             margin-top: 21rem;
@@ -1707,11 +1724,6 @@ html {
         .send-button {
             padding: 2rem 4.5rem;
         }
-        .modal-title::before {
-            left: 6rem;
-            padding: 1.2rem;
-            top: 4.4rem;
-        }
         .modal-title {
             font-size: 1.5rem;
         }
@@ -1731,11 +1743,19 @@ html {
         }
         .about-company-item {
             margin-top: 0rem;
+            grid-template-columns: repeat(1, 4fr);
         }
 
 }
 
 @media (max-width: 360px) {
+    .modal-title::before {
+        width: 20px;
+        height: 20px;
+        left: -15px;
+        top: -13px;
+    }
+      
     .title {
         font-size: 2.2rem;
     }
@@ -1775,9 +1795,7 @@ html {
         padding: 1rem 2.5rem;
         font-size: 1.3rem;
     }
-    .modal-title::before {
-        left: 6.3rem;
-    }
+
     .modal-title {
         font-size: 1.1rem;
 
@@ -1792,30 +1810,9 @@ html {
     .grid-timetable {
         height: 114px;
     }
-    .grid-timetable:nth-child(1) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(2) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(3) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(4) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(5) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable:nth-child(6) img {
-        margin-bottom: 90px;
-    }
-    .grid-timetable-title {
-        margin-top: 0;
-    }
     .grid-menu {
         max-height: 14rem;
-        margin-top: 12px;
+
     }
     .grid-timetable-description {
         margin-bottom: 0;
@@ -1852,6 +1849,9 @@ html {
     }
     .grid-timetable:nth-child(6) img {
         margin-right: 10px;
+    }
+    .footer-ul {
+        gap: 2rem;
     }
 }
 @media (max-width: 340px) {

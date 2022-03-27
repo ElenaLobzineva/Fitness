@@ -1734,10 +1734,10 @@ html {
         }
         .popup-form > input {
             padding: 10px 0 5px 5px;
-            font-size: 1.2rem;
+            font-size: 10px;
         }
         .popup-form input[type="email"] {
-            font-size: 1.2em;
+            font-size: 10px;
         }
         .box {
             height: 25rem;

@@ -99,16 +99,17 @@
                                 <p class="event-title">Как стать тренером?</p>
                                 <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">вебинар</button>
-                                <a href="#modal_vebinar_1" class="btn-event"></a>
+                                <button class="btn-event" onclick="openModal('modalpopap')"></button>
                             </div>
                         </div>
                         <div class="event-vebinar-2">
+                            
                             <div class="box-event-gradient">
                                 <p class="event-data">15.07</p>
                                 <p class="event-title">Йога, как стиль жизни</p>
                                 <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">вебинар</button>
-                                <a href="#modal_vebinar_2" class="btn-event"></a>
+                                <button class="btn-event" onclick="openModal('modalpopap')"></button>
                             </div>
                         </div>
                     </div> 
@@ -310,9 +311,9 @@
     <a href="#" class="header-logo-img"></a>
     <nav>
         <ul class="header-ul-burger">
-             <li><a href="#upcoming-events">Мероприятия</a></li>
-             <li><a href="#timetable-workout">Расписание</a></li>
-             <li><a href="#info-company">О компании</a></li>
+             <li><a href="#upcoming-events" onclick="closeModal()">Мероприятия</a></li>
+             <li><a href="#timetable-workout" onclick="closeModal()">Расписание</a></li>
+             <li><a href="#info-company" onclick="closeModal()">О компании</a></li>
         </ul>
     </nav>
     <div class="social">
@@ -323,8 +324,6 @@
 </div>
  </div>
  
-
-
 
 <!--MODAL--> 
 

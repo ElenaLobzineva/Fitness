@@ -35,6 +35,7 @@ html {
     display: flex;
     list-style-type: none;
     gap: 5.5rem;
+    justify-content: center;
 }
 .header-ul a:hover{
     padding-bottom: .8rem;
@@ -42,7 +43,7 @@ html {
 }
 .social {
     display: flex;
-    gap: 3.2rem;
+    gap: 2rem;
     justify-content: space-between;
 
 
@@ -296,7 +297,7 @@ html {
     position: relative;
 }
 .event-vebinar-2 {
-    background-image: url(../images/files/@2x/Vebinar\ 2@2x.png);
+    background-image: url(../images/files/@2x/Vebinar_2@2x.png);
     background-repeat: no-repeat;
     display: block;
     background-size: cover;
@@ -997,8 +998,8 @@ html {
 /*---BURGER---*/
 
 .header-burger {
-    width: 4.5rem;
-    height: 2.5rem;
+    width: 85px;
+    height: 22px;
     cursor: pointer;
     background-image: url(../images/icons/burger.svg);
     background-color: transparent;
@@ -1030,8 +1031,8 @@ html {
     left: 50%;
     transform: translate(-50%);
     opacity: 1;
-    padding-top: 60px;
-    padding-left: 16px;
+    padding: 60px 15px 15px;
+   
  }
  
  #modal {
@@ -1249,9 +1250,7 @@ html {
     .text {
         margin-top: 10.4rem;
     }
-    .header-ul a {
-        font-size: 1.5rem;
-    }
+ 
     .event-title {
         font-size: 2.1rem;
         max-width: 20rem;
@@ -1269,7 +1268,7 @@ html {
        padding: 2rem 1.7rem;
    }
    .header-ul {
-       gap: 3.5rem;
+       gap: 2.5rem;
    }
    .banner-text {
        padding: 2rem 3.5rem;
@@ -1309,7 +1308,7 @@ html {
         height: 2.4rem;
     }
     .header-burger {
-        margin-left: 5.5rem
+        margin-left: 4.5rem
     }
     .form-send-subscription {
         padding-bottom: 42px;
@@ -1461,7 +1460,7 @@ html {
         margin-top: 2.5rem; 
     }
     .footer-ul {
-        gap: 4rem;
+        gap: 3rem;
     }
     .footer-ul a {
         font-size: 15px;
@@ -1549,6 +1548,19 @@ html {
     }
     .grid-timetable-title {
         margin-top: 24px;
+    }
+    .footer-rights {
+          flex-direction: column;
+    font-size: 10px;
+    align-items: center;
+    }
+    .footer-cover {
+        align-items: center;
+    }
+    .footer-contacts {
+        align-self: initial;
+        justify-content: space-between;
+        width: 100%;
     }
 }
 @media (max-width: 550px) {
@@ -1690,28 +1702,17 @@ html {
             right: 10rem;
         }
 
-        .footer-rights {
-            justify-content: center;
-            flex-wrap: wrap;
-            font-size: 10px;
-        }
+    
         .footer-item {
             gap: 2rem;
         }
-        .footer-cover {
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+ 
         .footer-item {
             flex-direction: column;
             align-items: center;
             gap: 41px;
         }
-        .footer-contacts {
-            align-self: initial;
-            justify-content: space-between;
-            width: 100%;
-        }
+
         .footer-ul a {
             font-size: 1.2rem;
         }
@@ -1758,6 +1759,7 @@ html {
       
     .title {
         font-size: 2.2rem;
+        margin-top: 0;
     }
     .desc {
         font-size: 1.5rem;
@@ -1787,6 +1789,48 @@ html {
     }
     .grid-timetable-title {
         font-size: 1.5rem;
+        margin: 0; 
+    }
+
+
+
+    .grid-timetable .grid-menu-text {
+        margin-bottom: 10px;
+        }
+
+    .grid-timetable:nth-child(4)  .grid-menu-text {
+    margin-bottom: 38px;
+    }
+
+    .grid-timetable:nth-child(1) img {
+        width: 3rem;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .grid-timetable:nth-child(2) img {
+        width: 2rem;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .grid-timetable:nth-child(3) img {
+        width: 4rem;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .grid-timetable:nth-child(4) img {
+        width: 3rem;
+        margin-right: 20px;
+        margin-bottom: 60px;
+    }
+    .grid-timetable:nth-child(5) img {
+        width: 3rem;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .grid-timetable:nth-child(6) img {
+        width: 3rem;
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
     .modal_content {
         width: 15em;
@@ -1795,20 +1839,18 @@ html {
         padding: 1rem 2.5rem;
         font-size: 1.3rem;
     }
-
     .modal-title {
         font-size: 1.1rem;
-
     }
     .modal-description {
         font-size: 1.1rem;
-     
+        margin-top: 10px;
     }
     .modal-form > input {
         padding: 10px 0 5px 5px;
     }
     .grid-timetable {
-        height: 114px;
+        height: 100px;
     }
     .grid-menu {
         max-height: 14rem;
@@ -1818,40 +1860,43 @@ html {
         margin-bottom: 0;
         margin-top: 10px;
     }
-    .grid-timetable-title {
-       margin-bottom: 0; 
-    }
     .grid-timetable:nth-child(4) {
-        min-height: 20.6rem;
+        min-height: 170px;
     }
     .timetable-grid {
-        grid-template-rows: 14rem 24rem 14rem 14rem 14rem 14rem;
+        grid-template-rows: 12rem 19rem 12rem 12rem 12rem 12rem;
         gap: 10px;
+        margin-top: 0;
     }
     .grid-timetable {
         min-width: 28rem;
         padding: 18px 8px 0;
-    }
-    .grid-timetable:nth-child(1) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(2) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(3) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(4) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(5) img {
-        margin-right: 10px;
-    }
-    .grid-timetable:nth-child(6) img {
         margin-right: 10px;
     }
     .footer-ul {
         gap: 2rem;
+        margin: 0;
+    }
+    .subscription-title::before {
+        height: 3.3rem;
+        width: 3.3rem;
+        top: -21px;
+        right: 20.6rem;
+    }
+    .about-company-text {
+        padding-bottom: 0rem;
+    }
+    .about-company-item {
+        width: 21rem;
+    }
+    .container-content {
+        margin-bottom: 24px;
+    }
+    .footer-item {
+        gap: 33px;
+    }
+    .footer-linc {
+        font-size: 10px;
     }
 }
 @media (max-width: 340px) {
@@ -1901,4 +1946,5 @@ html {
     .agreement {
        justify-content: center;
     }
+  
 }

@@ -35,7 +35,8 @@ html {
     display: flex;
     list-style-type: none;
     gap: 5.5rem;
-    justify-content: center;
+    
+    
 }
 .header-ul a:hover{
     padding-bottom: .8rem;
@@ -81,6 +82,7 @@ html {
     font-size: 1.8rem;
     color: #2B3541;   
     text-decoration: none;
+    transition: all .3s ease;
 }
 .text { 
    max-width: 67.6rem;
@@ -94,7 +96,7 @@ html {
     text-transform: uppercase;
     margin: 0;
     margin-left: 2px;
-    margin-bottom: 5.3rem;
+    margin-bottom: 34px;
     letter-spacing: 1px;
     color: #2B3541;
 }
@@ -104,14 +106,13 @@ html {
     font-weight: 400;
     line-height: 125%;
     letter-spacing: 1px;
-    padding-bottom: 2rem;
     color: #2B3541;
 }
 .desc {
     font-size: 1.8rem;
     font-weight: 400;
     max-width: 29.7rem;
-    margin-top: -6px;
+
     margin-bottom: 4.3rem;
     color: #2B3541;
 }
@@ -144,6 +145,7 @@ html {
     background-color: transparent;
     margin-top: 24.5rem;
     cursor: pointer;
+    
 }
 .text-right {
     margin-left: 9rem;
@@ -188,14 +190,18 @@ html {
     margin-top: 16rem;
     color: #2B3541;
 }
+.box-event-flex {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
 .event-data {
     font-size: 1.8rem;
     line-height: 150%;
     color: #2B3541;
     opacity: 0.6;
     font-weight: 700;
-    margin-top: 3.4rem;
-    margin-left: 2.7rem;
+    
 }
 .box-event {
     display: grid;
@@ -208,9 +214,6 @@ html {
     line-height: 125%;
     font-weight: 700;
     max-width: 26rem;
-    margin-top: 1rem;
-    margin-left: 3.7rem;
-    margin-bottom: 5.7rem;
     color: #2B3541;
 }
 .button-participate {
@@ -223,6 +226,7 @@ html {
     padding: 1rem 2rem;
     margin-bottom: 0;
     font-size: 18px;
+    
 }
 .btn-event {
     display: none;
@@ -267,6 +271,8 @@ html {
     margin-left: 3.7rem;
     opacity: 0;
     border: none;
+    cursor: pointer;
+    transition: all .3s ease;
 }
 .participate:hover {
     color: #FBF138;
@@ -342,7 +348,6 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 95%;
     position: relative;
    
     transition: .3s linear border;
@@ -506,9 +511,10 @@ html {
  .subscription-blok {
     max-width: 60rem;
     margin: auto;
+    
   
-    padding-bottom: 0rem;
     padding-top: 8rem;
+    padding-bottom: 11.4rem;
     position: relative;
     z-index: 1;
 }
@@ -568,7 +574,6 @@ html {
     position: relative;
     max-width: 64.6rem;
     padding-top: 1rem;
-    padding-bottom: 11.4rem;
     margin: 0 auto;
 }
 
@@ -582,6 +587,7 @@ html {
      text-transform: uppercase;
      line-height: 150%;
      cursor: pointer;
+     transition: all .3s ease;
  }
  .send-subscription-btn:hover {
     background-color: #2B3541;
@@ -710,13 +716,13 @@ html {
 .about-company-title {
     font-size: 4rem;
     font-weight: 700;
-    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 .about-company-text {
     font-size: 1.8rem;
     line-height: 150%;
     width: 50rem;
-   padding-bottom: 4rem;
+    margin: 0;
 }
 .about-company-btn {
     font-size: 1.6rem;
@@ -731,6 +737,8 @@ html {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    transition: all .3s ease;
+    margin-top: 5rem;
 }
 .about-company-btn:hover {
     background-color: #2B3541;
@@ -773,15 +781,14 @@ html {
 
 .footer-cover {
     display: flex;
-    margin-top: 3.5rem;
     justify-content: space-between;
 }
 
 .footer-body {
     position: relative;
     background: #F3F3F3;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 5.5rem;
+    padding-bottom: 7rem;
     z-index: 0;
 }
 .footer nav {
@@ -796,6 +803,7 @@ html {
 .footer-ul a:hover {
     padding-bottom: .8rem;
     border-bottom: #2B3541 1px solid ;
+    transition: all .3s ease;
 }
 .footer-social {
     display: flex;
@@ -905,9 +913,10 @@ html {
 }
 
  .js-modal-modalpopap #event_modal {
-    top: 20px;
+    position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     opacity: 1;
  }
   .modal_windows {
@@ -1058,6 +1067,7 @@ html {
     padding: 0;
     column-rule: 1px;
     list-style-type: none;
+    
 }
 .header-ul-burger a:hover{
     padding-bottom: .8rem;
@@ -1067,6 +1077,7 @@ html {
     font-size: 1.8rem;
     color: #2B3541;   
     text-decoration: none;
+    transition: all .3s ease;
 }
 
 #modal .social {
@@ -1243,6 +1254,9 @@ html {
     .box-image {
         max-width: 143%;
     }
+    .about-company-text{
+        width: 45rem;
+    }
  
 }
 @media (max-width: 950px) {
@@ -1363,7 +1377,7 @@ html {
         font-size: 2.5rem;
     }
     .box {
-        height: 87%;
+        height: 91%;
     }
     .box-image {
         max-width: 140%;
@@ -1388,8 +1402,7 @@ html {
     }
     .event-data {
         font-size: 1.3rem;
-        margin-top: 1.4rem;
-        margin-left: 2.7rem;
+    
     }
     .event-title {
     font-size: 1.6rem;
@@ -1497,51 +1510,14 @@ html {
     }
 }
 @media (max-width: 750px) { 
-    .arrow {
-        display: none;
-    }
-    .workout-box {
-        flex-direction: column;
-    }
-    .box {
-        position: relative;
-        height: 30rem;
-        right: -11rem;
-        flex-direction: row;
-        max-width: 64%;
-    }
-    .text-right {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .box-image {
+ 
+    .box {  
         right: 0rem;
-        top: 0%;
+        height: 53vw;
     }
+
     .events-headers {
-        margin-top: 34rem;
-    }
-    .banner-text {
-        display: block;
-        text-align: center;
-    }
-    .banner-text {
-        padding: 2rem 2.5rem;
-    }
-    .workout-box {
-        width: 100%;
-    }
-    .title {
-        font-size: 3.7rem;
-        max-width: 65rem;
-    }
-    .text {
-        max-width: 65rem;
-    }
-    .desc {
-        font-size: 1.6rem;
-        max-width: 41rem;
+    margin-top: 9rem;
     }
     .footer-rights {
         font-size: 12px;
@@ -1571,6 +1547,7 @@ html {
     .title {
         font-size: 2.2rem;
     }
+   
     .timetable-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -1684,14 +1661,11 @@ html {
             background-size: cover;
             margin-top: 20px;
         }
-
         .company-mobile-flex {
             display: flex;
             flex-direction: column;
         }
-        .events-headers {
-            margin-top: 21rem;
-        }
+
         .footer {
             justify-content: center;
         }
@@ -1702,11 +1676,9 @@ html {
             right: 10rem;
         }
 
-    
         .footer-item {
             gap: 2rem;
         }
- 
         .footer-item {
             flex-direction: column;
             align-items: center;
@@ -1716,9 +1688,7 @@ html {
         .footer-ul a {
             font-size: 1.2rem;
         }
-        .event-title {
-            margin-left: 1.5rem;
-        }
+    
         .modal_content {
             width: 20em;
         }
@@ -1745,6 +1715,13 @@ html {
         .about-company-item {
             margin-top: 0rem;
             grid-template-columns: repeat(1, 4fr);
+        }
+        .arrow {
+            display: none;
+        }
+        .banner-workout {
+        
+            flex-direction: column;
         }
 
 }
@@ -1923,7 +1900,6 @@ html {
     }
     .event-title {
         font-size: 1.2rem;
-        margin-left: 1.7rem;
     }
     .timetable-title {
         font-size: 2rem;

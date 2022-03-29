@@ -85,9 +85,11 @@
                 </div>
                     <div class="box-event">
                         <div class="event-maraphon">
-                            <div class="box-event-gradient">    
-                                <p class="event-data">29.06 - 4.07</p>
-                                <p class="event-title">Марафон выносливости</p>
+                            <div class="box-event-gradient">
+                                <div class="box-event-flex">
+                                    <p class="event-data">29.06 - 4.07</p>
+                                    <p class="event-title">Марафон выносливости</p>  
+                                </div>  
                                 <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">марафон</button>
                                 <button class="btn-event" onclick="openModal('modalpopap')"></button>
@@ -95,8 +97,10 @@
                         </div>
                         <div class="event-vebinar-1">
                             <div class="box-event-gradient">
-                                <p class="event-data">9.07</p>
-                                <p class="event-title">Как стать тренером?</p>
+                                <div class="box-event-flex">
+                                    <p class="event-data">9.07</p>
+                                    <p class="event-title">Как стать тренером?</p>
+                                </div>
                                 <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">вебинар</button>
                                 <button class="btn-event" onclick="openModal('modalpopap')"></button>
@@ -105,8 +109,11 @@
                         <div class="event-vebinar-2">
                             
                             <div class="box-event-gradient">
-                                <p class="event-data">15.07</p>
-                                <p class="event-title">Йога, как стиль жизни</p>
+                                <div class="box-event-flex">
+                                    <p class="event-data">15.07</p>
+                                    <p class="event-title">Йога, как стиль жизни</p>
+                                </div>
+                                
                                 <button class="participate" onclick="openModal('modalpopap')">Участвовать</button>
                                 <button class="button-participate">вебинар</button>
                                 <button class="btn-event" onclick="openModal('modalpopap')"></button>
@@ -131,7 +138,7 @@
                             <img class="img-grid" src="images/icons/body.svg" alt="Функциональный тренинг">
                             <div class="grid-menu-text">
                                 <p class="grid-timetable-title">Функциональный тренинг</p>
-                                <p class="grid-timetable-description">Описание тренинга</p>
+                                <p class="grid-timetable-description">Фитнес высокой интенсивности.</p>
                             </div>
                            
                         </div>
@@ -143,7 +150,7 @@
                             <img class="img-grid" src="images/icons/bottle.svg" alt="Body sculpt">
                             <div class="grid-menu-text">
                                 <p class="grid-timetable-title">Body sculpt</p>
-                                <p class="grid-timetable-description">Описание Body sculpt</p>
+                                <p class="grid-timetable-description">Комплекс силовых упражнений, который выполняется в активном режиме и направлен на наращивание основных мышечных групп.</p>
                             </div>
                             
                         </div>
@@ -155,7 +162,8 @@
                             <img class="img-grid" src="images/icons/dumbbell.svg" alt="L.A.B.">
                             <div class="grid-menu-text">
                                 <p class="grid-timetable-title">L.A.B.</p>
-                            <p class="grid-timetable-description">Описание L.A.B.</p>
+                            <p class="grid-timetable-description">Силовая тренировка с акцентом на мышцы ягодиц, ног и пресса.
+                            </p>
                             </div>
                             
                         </div>
@@ -179,7 +187,7 @@
                             <img class="img-grid" src="images/icons/heart.svg" alt="Дыхательные практики">
                             <div class="grid-menu-text">
                                 <p class="grid-timetable-title">Дыхательные практики</p>
-                            <p class="grid-timetable-description">Описание дыхательные практики.</p>
+                            <p class="grid-timetable-description">Неотъемлемая часть большинства восточных культур.</p>
                             </div>
                             
                         </div>
@@ -208,7 +216,6 @@
     <div class="container">
         <div class="subscription-blok">
             <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        </div>
         <form class="form-send-subscription">
             <div class="send">
                 <div class="send-input">
@@ -222,6 +229,7 @@
             </div>       
         </form>
     </div>
+    </div>
 </div>
 
 <!--О КОМПАНИИ-->
@@ -233,7 +241,7 @@
             <div class="container-content">
                 <div class="company-text">
                     <h3 class="about-company-title">О компании</h3>
-                       <p class="about-company-text">Наша компания является одной из&nbsp;немногих,&nbsp;кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами&nbsp;и&nbsp;вы&nbsp;сами увидите, что&nbsp;мы проводим не&nbsp;только онлайн-тренировки.</p>
+                       <p class="about-company-text">Наша компания является одной из&nbsp;немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами&nbsp;и&nbsp;вы&nbsp;сами увидите, что&nbsp;мы проводим не&nbsp;только онлайн-тренировки.</p>
                     <button class="about-company-btn" onclick="openModal('modalpopap')">Записаться</button>
                     <div class="about-company-img-gradient">          
                     </div>                        
@@ -287,7 +295,7 @@
                             </ul>
                     </div>
                     <div class="footer-contacts">
-                        <a href="#" class="footer-site">info@freefit.com</a>
+                        <a href="mailto:info@freefit.com" class="footer-site">info@freefit.com</a>
                         <div class="footer-social">
                             <p><a href="#" class="footer-social-in"></a></p>
                             <p><a href="#" class="footer-social-fb"></a></p>

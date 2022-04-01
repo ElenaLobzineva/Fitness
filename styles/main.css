@@ -1541,6 +1541,7 @@ html {
 }
 @media (max-width: 550px) {
 
+  
     .grid-timetable {
         height: 170px;
     }
@@ -1719,11 +1720,11 @@ html {
         .arrow {
             display: none;
         }
-        .banner-workout {
-        
-            flex-direction: column;
-        }
-
+.workout-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 }
 
 @media (max-width: 360px) {

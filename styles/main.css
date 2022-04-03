@@ -1749,7 +1749,13 @@ html {
         .box-image {
         top: 0;
         max-width: 84vw;
-        right: -1.3rem;
+        right: -5.7rem;
+        }
+        .subscription-blok {
+            padding-bottom: 3.4rem;
+        }
+        .about-company {
+            margin-top: 4.5rem;
         }
 }
 @media (max-width: 360px) {
@@ -1914,20 +1920,18 @@ html {
     .banner-text {
         padding: 2rem 1.3rem;
     }
-    .events-headers {
-        margin-top: 17rem;
-    }
+
     .events-headers h3 {
         font-size: 2rem;
     }
     .subscription {
-        margin-top: 8rem;
+        margin-top: 5rem;
     }
     .footer-ul a {
         font-size: 1.1rem;
     }
     .about-company {
-        margin-top: 5.5rem;
+        margin-top: 3.5rem;
     }
     .about-company-text {
         padding-bottom: 2rem;
@@ -1942,7 +1946,7 @@ html {
         font-size: 1.5rem;
     }
     .box {
-        height: 23rem;
+        height: 22rem;
     }
     .grid-timetable {
         min-width: 26rem;

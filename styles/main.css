@@ -686,9 +686,7 @@ html {
  .about-company {
     margin-top: 15.5rem;
 }
-.company-text {
-    max-width: 40rem;
-}
+
 .container-content {
     position: relative;
     margin-bottom: 15rem;
@@ -1107,7 +1105,7 @@ html {
     background-size: contain;
     width: 2.5rem;
     height: 100%;
-    top: 3rem;
+    top: 6rem;
     right: .8rem;
 }
 .workout-box {
@@ -1336,7 +1334,7 @@ html {
     .about-company-text {
         font-size: 1.5rem;
         padding-bottom: 5rem;
-        max-width: 27rem;
+        max-width: 25rem;
     }
     .about-company-img-gradient {
         background-size: cover;
@@ -1708,18 +1706,22 @@ html {
         .footer-ul a {
             font-size: 1.2rem;
         }
-        .modal_content {
-            width: 20em;
-        }
+     
         .send-button {
-            padding: 2rem 4.5rem;
+            padding: 1.7rem 4rem;
+        }
+        .modal_content {
+            width: 25rem;
         }
         .modal-title {
             font-size: 1.5rem;
         }
         .modal-description {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
+        }
+        .modal_windows {
+            padding: 55px 35px 30px;
         }
         .popup-form > input {
             padding: 10px 10px 5px 5px;
@@ -1757,6 +1759,7 @@ html {
         .about-company {
             margin-top: 4.5rem;
         }
+        
 }
 @media (max-width: 360px) {
     .modal-title::before {

@@ -1724,11 +1724,12 @@ html {
             padding: 55px 35px 30px;
         }
         .popup-form > input {
-            padding: 10px 10px 5px 5px;
+            padding: 20px 15px;
             font-size: 10px;
         }
         .popup-form input[type="email"] {
             font-size: 10px;
+            padding: 20px 15px;
         }
         .box {
             height: 25rem;
@@ -1852,7 +1853,7 @@ html {
         margin-bottom: 20px;
     }
     .modal_content {
-        width: 15em;
+        width: 21rem;
     }
     .send-button {
         padding: 1rem 2.5rem;
